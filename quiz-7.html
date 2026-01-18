@@ -8,7 +8,8 @@
       content="Mit Leidenschaft halten wir deine schönsten Erinnerungen fest – von der Vorfreude bis zu den ersten Tagen deines Babys. Wir kreieren emotionale, zeitlose Bilder, die dich ein Leben lang begleiten."
     />
     <meta name="keywords" content="Fotoshooting, Babybauch, Newborn, Hagen" />
-    <title>Wen bringst du mit?  - Quiz</title>
+
+    <title>Wie alt ist dein Neugeborenes? - Quiz</title>
 
     <!-- Security Headers -->
     <meta
@@ -32,6 +33,23 @@
     <link href="css/quiz-thanks/quiz-header.css" rel="stylesheet" />
     <link href="css/quiz-thanks/quiz-question.css" rel="stylesheet" />
     <link href="css/sections/legal-footer.css" rel="stylesheet" />
+    <!-- <link href="css/sections/hero.css" rel="stylesheet" />
+    <link href="css/sections/promotional.css" rel="stylesheet" />
+    <link href="css/sections/features.css" rel="stylesheet" />
+    <link href="css/sections/gallery.css" rel="stylesheet" />
+    <link href="css/sections/benefits.css" rel="stylesheet" />
+    <link href="css/sections/process.css" rel="stylesheet" />
+    <link href="css/sections/fullwidth-image.css" rel="stylesheet" />
+    <link href="css/sections/faq.css" rel="stylesheet" />
+    <link href="css/sections/services.css" rel="stylesheet" />
+    <link href="css/sections/about.css" rel="stylesheet" />
+    <link href="css/sections/footer.css" rel="stylesheet" />
+    <link href="css/sections/legal-footer.css" rel="stylesheet" />
+    <link href="css/quiz-thanks/quiz-question.css" rel="stylesheet" />
+    <link href="css/quiz-thanks/quiz-form.css" rel="stylesheet" />
+    <link href="css/quiz-thanks/thank-you-hero.css" rel="stylesheet" />
+    <link href="css/quiz-thanks/quiz-header.css" rel="stylesheet" />
+    <link href="css/sections/author-footer.css" rel="stylesheet" /> -->
   </head>
   <body>
     <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
@@ -54,13 +72,13 @@
           <!-- ПРОГРЕСС / ПОДЗАГОЛОВОК-->
           <div class="quiz-header__progress">
             <p class="text-medium-small" style="color: #3d3d3d">
-              Letzte Frage!  
+              3 Fragen bis zur Anfrage
             </p>
           </div>
 
           <div class="quiz-header__progress">
             <p class="text-medium-small" style="color: #3d3d3d">
-              Dein Babybauch-Fotoshooting!
+              Dein Newborn-Fotoshooting!
             </p>
           </div>
         </div>
@@ -70,13 +88,16 @@
     <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  QUIZ QUESTION 
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-    <section class="quiz-question bg-brand-primary" data-question-id="q4">
+
+    <section class="quiz-question bg-brand-primary" data-question-id="q1">
       <div class="container">
         <!-- ════════════════════════════════════════════════════════════════════════
          ЗАГОЛОВОК ВОПРОСА
          ════════════════════════════════════════════════════════════════════════ -->
         <div class="quiz-question__title">
-          <h1 class="text-h2" style="color: #000000">Wen bringst du mit? </h1>
+          <h1 class="text-h2" style="color: #000000">
+            Wie alt ist dein Neugeborenes?
+          </h1>
         </div>
 
         <!-- ════════════════════════════════════════════════════════════════════════
@@ -86,79 +107,69 @@
           <div class="quiz-question__card">
             <div class="quiz-question__image-wrapper">
               <img
-                src="/assets/images/babybauch/foto11.jpg"
-                alt="allein"
+                src="/assets/images/newborn/foto6.jpg"
+                alt="0-7_Tage"
                 class="quiz-question__image"
               />
             </div>
             <a
-              href="quiz-5.html"
-              class="quiz-question__option quiz-question__option--multiline"
-              data-answer="allein"
-              onclick="saveQuizAnswer('q4', 'allein')"
+              href="quiz-8.html"
+              class="quiz-question__option"
+              data-answer="0-7_Tage"
+              onclick="saveQuizAnswer('q1', '0-7_Tage')"
             >
-              <span class="quiz-question__option-text"
-                >Ich komme allein</span
-              >
+              <span class="quiz-question__option-text">0-7 Tage</span>
             </a>
           </div>
           <div class="quiz-question__card">
             <div class="quiz-question__image-wrapper">
               <img
-                src="/assets/images/babybauch/foto7.jpeg"
-                alt="mit_meinem_Partner"
+                src="/assets/images/newborn/foto8.jpg"
+                alt="1-2_Wochen"
                 class="quiz-question__image"
               />
             </div>
             <a
-              href="quiz-5.html"
-              class="quiz-question__option quiz-question__option--multiline"
-              data-answer="mit_meinem_Partner"
-              onclick="
-                saveQuizAnswer('q4', 'mit_meinem_Partner')
-              "
+              href="quiz-8.html"
+              class="quiz-question__option"
+              data-answer="1-2_Wochen"
+              onclick="saveQuizAnswer('q1', '1-2_Wochen')"
             >
-              <span class="quiz-question__option-text"
-                >Ich komme mit meinem Partner
-              </span>
+              <span class="quiz-question__option-text">1-2 Wochen</span>
             </a>
           </div>
           <div class="quiz-question__card">
             <div class="quiz-question__image-wrapper">
               <img
-                src="/assets/images/babybauch/foto8.jpg"
-                alt="mit mein/meinen Kindern"
+                src="/assets/images/newborn/foto5.jpg"
+                alt="2-4_Wochen"
                 class="quiz-question__image"
               />
             </div>
             <a
-              href="quiz-5.html"
-              class="quiz-question__option quiz-question__option--multiline"
-              data-answer="mit_meinen_Kindern"
-              onclick="saveQuizAnswer('q4', 'mit_meinen_Kindern')"
+              href="quiz-8.html"
+              class="quiz-question__option"
+              data-answer="2-4_Wochen"
+              onclick="saveQuizAnswer('q1', '2-4_Wochen')"
             >
-              <span class="quiz-question__option-text"
-                >Ich komme mit mein/meinen Kindern
-              </span>
+              <span class="quiz-question__option-text">2-4 Wochen</span>
             </a>
           </div>
           <div class="quiz-question__card">
             <div class="quiz-question__image-wrapper">
               <img
-                src="/assets/images/babybauch/foto8.jpg"
-                alt="ganzen Familie"
+                src="/assets/images/newborn/foto1.jpg"
+                alt="älter_als_4_Wochen"
                 class="quiz-question__image"
               />
             </div>
             <a
-              href="quiz-5.html"
-              class="quiz-question__option quiz-question__option--multiline"
-              data-answer="ganzen_Familie"
-              onclick="saveQuizAnswer('q4', 'ganzen_Familie')"
+              href="quiz-8.html"
+              class="quiz-question__option"
+              data-answer="älter_als_4_Wochen"
+              onclick="saveQuizAnswer('q1', 'älter_als_4_Wochen')"
             >
-              <span class="quiz-question__option-text"
-                >Ich komme mit meiner ganzen Familie</span
-              >
+              <span class="quiz-question__option-text">Älter als 4 Wochen</span>
             </a>
           </div>
         </div>

@@ -8,7 +8,8 @@
       content="Mit Leidenschaft halten wir deine schönsten Erinnerungen fest – von der Vorfreude bis zu den ersten Tagen deines Babys. Wir kreieren emotionale, zeitlose Bilder, die dich ein Leben lang begleiten."
     />
     <meta name="keywords" content="Fotoshooting, Babybauch, Newborn, Hagen" />
-    <title>Wen bringst du mit?  - Quiz</title>
+
+    <title>Welche Momente möchtest du besonders festhalten? - Quiz</title>
 
     <!-- Security Headers -->
     <meta
@@ -54,13 +55,13 @@
           <!-- ПРОГРЕСС / ПОДЗАГОЛОВОК-->
           <div class="quiz-header__progress">
             <p class="text-medium-small" style="color: #3d3d3d">
-              Letzte Frage!  
+              2 Fragen bis zur Anfrage 
             </p>
           </div>
 
           <div class="quiz-header__progress">
             <p class="text-medium-small" style="color: #3d3d3d">
-              Dein Babybauch-Fotoshooting!
+              Dein Newborn-Fotoshooting!
             </p>
           </div>
         </div>
@@ -70,13 +71,15 @@
     <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  QUIZ QUESTION 
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-    <section class="quiz-question bg-brand-primary" data-question-id="q4">
+    <section class="quiz-question bg-brand-primary" data-question-id="q1">
       <div class="container">
         <!-- ════════════════════════════════════════════════════════════════════════
          ЗАГОЛОВОК ВОПРОСА
          ════════════════════════════════════════════════════════════════════════ -->
         <div class="quiz-question__title">
-          <h1 class="text-h2" style="color: #000000">Wen bringst du mit? </h1>
+          <h1 class="text-h2" style="color: #000000">
+            Welche Momente möchtest du besonders festhalten?
+          </h1>
         </div>
 
         <!-- ════════════════════════════════════════════════════════════════════════
@@ -86,78 +89,72 @@
           <div class="quiz-question__card">
             <div class="quiz-question__image-wrapper">
               <img
-                src="/assets/images/babybauch/foto11.jpg"
-                alt="allein"
+                src="/assets/images/newborn/foto1.jpg"
+                alt="erste_Lächeln"
                 class="quiz-question__image"
               />
             </div>
             <a
-              href="quiz-5.html"
+              href="quiz-9.html"
+              class="quiz-question__option"
+              data-answer="erste_Lächeln"
+              onclick="saveQuizAnswer('q1', 'erste_Lächeln')"
+            >
+              <span class="quiz-question__option-text">Das erste Lächeln</span>
+            </a>
+          </div>
+          <div class="quiz-question__card">
+            <div class="quiz-question__image-wrapper">
+              <img
+                src="/assets/images/newborn/foto6.jpg"
+                alt="winzige_Momente"
+                class="quiz-question__image"
+              />
+            </div>
+            <a
+              href="quiz-9.html"
+              class="quiz-question__option"
+              data-answer="winzige_Momente"
+              onclick="saveQuizAnswer('q1', 'winzige_Momente')"
+            >
+              <span class="quiz-question__option-text">Winzige Momente </span>
+            </a>
+          </div>
+          <div class="quiz-question__card">
+            <div class="quiz-question__image-wrapper">
+              <img
+                src="/assets/images/newborn/foto3.jpg"
+                alt="Kuschel-Momente"
+                class="quiz-question__image"
+              />
+            </div>
+            <a
+              href="quiz-2.html"
               class="quiz-question__option quiz-question__option--multiline"
-              data-answer="allein"
-              onclick="saveQuizAnswer('q4', 'allein')"
+              data-answer="Kuschel-Momente"
+              onclick="saveQuizAnswer('q1', 'Kuschel-Momente')"
             >
               <span class="quiz-question__option-text"
-                >Ich komme allein</span
+                >Kuschel-Momente mit Mama und Papa</span
               >
             </a>
           </div>
           <div class="quiz-question__card">
             <div class="quiz-question__image-wrapper">
               <img
-                src="/assets/images/babybauch/foto7.jpeg"
-                alt="mit_meinem_Partner"
+                src="/assets/images/newborn/foto8.jpg"
+                alt="alle_Momente"
                 class="quiz-question__image"
               />
             </div>
             <a
-              href="quiz-5.html"
+              href="quiz-2.html"
               class="quiz-question__option quiz-question__option--multiline"
-              data-answer="mit_meinem_Partner"
-              onclick="
-                saveQuizAnswer('q4', 'mit_meinem_Partner')
-              "
+              data-answer="alle_Momente"
+              onclick="saveQuizAnswer('q1', 'alle_Momente')"
             >
               <span class="quiz-question__option-text"
-                >Ich komme mit meinem Partner
-              </span>
-            </a>
-          </div>
-          <div class="quiz-question__card">
-            <div class="quiz-question__image-wrapper">
-              <img
-                src="/assets/images/babybauch/foto8.jpg"
-                alt="mit mein/meinen Kindern"
-                class="quiz-question__image"
-              />
-            </div>
-            <a
-              href="quiz-5.html"
-              class="quiz-question__option quiz-question__option--multiline"
-              data-answer="mit_meinen_Kindern"
-              onclick="saveQuizAnswer('q4', 'mit_meinen_Kindern')"
-            >
-              <span class="quiz-question__option-text"
-                >Ich komme mit mein/meinen Kindern
-              </span>
-            </a>
-          </div>
-          <div class="quiz-question__card">
-            <div class="quiz-question__image-wrapper">
-              <img
-                src="/assets/images/babybauch/foto8.jpg"
-                alt="ganzen Familie"
-                class="quiz-question__image"
-              />
-            </div>
-            <a
-              href="quiz-5.html"
-              class="quiz-question__option quiz-question__option--multiline"
-              data-answer="ganzen_Familie"
-              onclick="saveQuizAnswer('q4', 'ganzen_Familie')"
-            >
-              <span class="quiz-question__option-text"
-                >Ich komme mit meiner ganzen Familie</span
+                >Alle diese kostbaren Momente</span
               >
             </a>
           </div>
