@@ -70,6 +70,27 @@ CSS переменные (Design Tokens):
 
 В этом лендинге два направления: "Фотосессии беременных" и "Фотосессии новорождённых". Если выбрать "Фотосессии новорождённых", то попадаeм на квизы для новорождённых.
 
+Логика:
+• quiz-1.html → ветка:
+o Babybauch → quiz-2.html
+o Newborn → quiz-6.html
+
+Babybauch:
+• quiz-2.html → quiz-3.html
+• quiz-3.html → quiz-4.html
+• quiz-4.html → quiz-5.html
+• quiz-5.html → quiz-form.html
+
+Newborn:
+• quiz-6.html:
+o Bereits Elternteil → quiz-7.html
+o Noch schwanger → quiz-10.html
+• quiz-7.html → quiz-8.html
+• quiz-10.html → quiz-8.html
+• quiz-8.html → quiz-9.html
+• quiz-9.html → quiz-5.html
+• quiz-5.html → quiz-form.html
+
 Конфигурация через data-атрибуты:
 
 ```html

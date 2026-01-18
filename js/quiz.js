@@ -24,7 +24,7 @@ const QUIZ_CONFIG = {
   storageKey: 'quiz_data',
 
   // Страница успеха
-  successPage: 'thank-you.html'
+  successPage: 'thank-you.html',
 };
 
 // Переопределение конфига из data-атрибутов на body
@@ -54,7 +54,7 @@ function initQuizData() {
     const initialData = {
       answers: {},
       startTime: new Date().toISOString(),
-      currentStep: 1
+      currentStep: 1,
     };
     saveQuizDataToStorage(initialData);
   }
@@ -90,7 +90,10 @@ function saveQuizDataToStorage(data) {
  * @param {string} answer - Ответ пользователя
  */
 function saveQuizAnswer(questionId, answer) {
-  const data = getQuizData() || { answers: {}, startTime: new Date().toISOString() };
+  const data = getQuizData() || {
+    answers: {},
+    startTime: new Date().toISOString(),
+  };
   data.answers[questionId] = answer;
   data.lastUpdated = new Date().toISOString();
   saveQuizDataToStorage(data);
@@ -141,7 +144,7 @@ function submitQuizForm(event) {
     phone: form.querySelector('#form-phone')?.value || '',
     availability: form.querySelector('#form-availability')?.value || '',
     privacy: form.querySelector('#form-privacy')?.checked || false,
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString(),
   };
 
   // Добавить ответы квиза
@@ -184,7 +187,20 @@ async function submitToGoogleSheets(data) {
     return Promise.resolve();
   }
 
-  // Подготовка данных для Google Sheets
+  // Подготовка данных для Google Sheets/ изменено в связи с добавлением квизов
+  // const payload = {
+  //   timestamp: data.timestamp,
+  //   name: data.name,
+  //   email: data.email,
+  //   phone: data.phone,
+  //   availability: data.availability,
+  //   privacy_accepted: data.privacy ? 'Ja' : 'Nein',
+  //   q1_kennst: data.quizAnswers?.q1 || '',
+  //   q2_bild: data.quizAnswers?.q2 || '',
+  //   q3_experience: data.quizAnswers?.q3 || '',
+  //   q4_wer: data.quizAnswers?.q4 || '',
+  //   quiz_start_time: data.quizStartTime || ''
+  // };
   const payload = {
     timestamp: data.timestamp,
     name: data.name,
@@ -192,11 +208,20 @@ async function submitToGoogleSheets(data) {
     phone: data.phone,
     availability: data.availability,
     privacy_accepted: data.privacy ? 'Ja' : 'Nein',
-    q1_kennst: data.quizAnswers?.q1 || '',
-    q2_bild: data.quizAnswers?.q2 || '',
-    q3_experience: data.quizAnswers?.q3 || '',
-    q4_wer: data.quizAnswers?.q4 || '',
-    quiz_start_time: data.quizStartTime || ''
+
+    q1_welches: data.quizAnswers?.q1 || '',
+    q2_termin_baby: data.quizAnswers?.q2 || '',
+    q3_kleider: data.quizAnswers?.q3 || '',
+    q4_wen: data.quizAnswers?.q4 || '',
+
+    q5_kennst: data.quizAnswers?.q5 || '',
+    q6_baby_schon: data.quizAnswers?.q6 || '',
+    q7_alt: data.quizAnswers?.q7 || '',
+    q8_momente: data.quizAnswers?.q8 || '',
+    q9_wen: data.quizAnswers?.q9 || '',
+    q10_termin_newborn: data.quizAnswers?.q10 || '',
+
+    quiz_start_time: data.quizStartTime || '',
   };
 
   // Отправка через fetch
@@ -204,9 +229,9 @@ async function submitToGoogleSheets(data) {
     method: 'POST',
     mode: 'no-cors', // Google Apps Script требует no-cors
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify(payload)
+    body: JSON.stringify(payload),
   });
 
   // При no-cors мы не можем читать ответ, но если fetch не выбросил ошибку,
@@ -228,7 +253,7 @@ function validateForm(form) {
 
   // Проверка обязательных полей
   const requiredFields = form.querySelectorAll('[required]');
-  requiredFields.forEach(field => {
+  requiredFields.forEach((field) => {
     if (field.type === 'checkbox') {
       if (!field.checked) {
         isValid = false;
@@ -280,12 +305,14 @@ function removeError(field) {
 // ============================================================================
 
 // Инициализация при загрузке страницы
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   initQuizData();
 
   // Добавить обработчики для снятия ошибок при вводе
-  const formInputs = document.querySelectorAll('.quiz-form__input, .quiz-form__checkbox');
-  formInputs.forEach(input => {
+  const formInputs = document.querySelectorAll(
+    '.quiz-form__input, .quiz-form__checkbox',
+  );
+  formInputs.forEach((input) => {
     input.addEventListener('input', () => removeError(input));
     input.addEventListener('change', () => removeError(input));
   });

@@ -38,6 +38,8 @@
   justify-content: space-between;
 }
 
+
+
 /* Карточка (картинка + кнопка) - без gap, кнопка прилегает к картинке */
 .quiz-question__card {
   display: flex;

@@ -9,7 +9,7 @@
     />
     <meta name="keywords" content="Fotoshooting, Babybauch, Newborn, Hagen" />
 
-    <title>Kennst du mich bereits? - Quiz</title>
+    <title>Welches Fotoshooting interessiert dich? - Quiz</title>
 
     <!-- Security Headers -->
     <meta
@@ -103,7 +103,7 @@
 
           <div class="quiz-header__progress">
             <p class="text-medium-small" style="color: #3d3d3d">
-              Jetzt Termin anfragen & profitieren!
+              Jetzt Termin anfragen &amp; profitieren!
             </p>
           </div>
         </div>
@@ -115,21 +115,21 @@
      ║  Поддерживает 2-4 варианта ответа с изображениями                          ║
      ║  Фон: через CSS класс bg-brand-primary (редактируется в css/base-styles.css)   ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-    <section class="quiz-question bg-brand-primary" data-question-id="q1">
-      <div class="container">
+    <!-- <section class="quiz-question bg-brand-primary" data-question-id="q1">
+      <div class="container"> -->
         <!-- ════════════════════════════════════════════════════════════════════════
          ЗАГОЛОВОК ВОПРОСА
          ════════════════════════════════════════════════════════════════════════ -->
-        <div class="quiz-question__title">
+        <!-- <div class="quiz-question__title">
           <h1 class="text-h2" style="color: #000000">
             Kennst du mich bereits? Welches Fotoshooting interessiert dich?
           </h1>
-        </div>
+        </div> -->
 
         <!-- ════════════════════════════════════════════════════════════════════════
          КАРТОЧКИ ВАРИАНТОВ (картинка + кнопка)
          ════════════════════════════════════════════════════════════════════════ -->
-        <div class="quiz-question__cards quiz-question__cards--4">
+        <!-- <div class="quiz-question__cards quiz-question__cards--4">
           <div class="quiz-question__card">
             <div class="quiz-question__image-wrapper">
               <img
@@ -198,6 +198,97 @@
               <span class="quiz-question__option-text">Nein, noch nicht</span>
             </a>
           </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  QUIZ QUESTION - Секция вопроса с вариантами ответов                       ║
+     ║  Под данный макет   ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+    <section class="quiz-question bg-brand-primary" data-question-id="q1">
+      <div class="container">
+        <!-- ════════════════════════════════════════════════════════════════════════
+         ЗАГОЛОВОК ВОПРОСА
+         ════════════════════════════════════════════════════════════════════════ -->
+        <div class="quiz-question__title">
+          <h1 class="text-h2" style="color: #000000">
+            Welches Fotoshooting interessiert dich?
+          </h1>
+        </div>
+
+        <!-- ════════════════════════════════════════════════════════════════════════
+         КАРТОЧКИ ВАРИАНТОВ (картинка + кнопка)
+         ════════════════════════════════════════════════════════════════════════ -->
+        <div class="quiz-question__cards quiz-question__cards--2">
+          <div class="quiz-question__card">
+            <div class="quiz-question__image-wrapper">
+              <img
+                src="/assets/images/babybauch/foto13.jpg"
+                alt="Babybauch"
+                class="quiz-question__image"
+              />
+            </div>
+            <a
+              href="quiz-2.html"
+              class="quiz-question__option"
+              data-answer="- 15%_Babybauch"
+              onclick="saveQuizAnswer('q1', '- 15%_Babybauch')"
+            >
+              <span class="quiz-question__option-text">- 15% Babybauch</span>
+            </a>
+          </div>
+          <div class="quiz-question__card">
+            <div class="quiz-question__image-wrapper">
+              <img
+                src="/assets/images/newborn/foto1.jpg"
+                alt="Newborn"
+                class="quiz-question__image"
+              />
+            </div>
+            <a
+              href="quiz-2.html"
+              class="quiz-question__option"
+              data-answer="- 15%_Newborn"
+              onclick="saveQuizAnswer('q1', '- 15%_Newborn')"
+            >
+              <span class="quiz-question__option-text">- 15% Newborn</span>
+            </a>
+          </div>
+          <!-- <div class="quiz-question__card">
+            <div class="quiz-question__image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w&#x3D;300&amp;h&#x3D;300&amp;fit&#x3D;crop"
+                alt="Schon sehr lang"
+                class="quiz-question__image"
+              />
+            </div>
+            <a
+              href="quiz-2.html"
+              class="quiz-question__option"
+              data-answer="sehr_lang"
+              onclick="saveQuizAnswer('q1', 'sehr_lang')"
+            >
+              <span class="quiz-question__option-text">Schon sehr lang</span>
+            </a>
+          </div> -->
+          <!-- <div class="quiz-question__card">
+            <div class="quiz-question__image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1576919228236-a097c32a5cd4?w&#x3D;300&amp;h&#x3D;300&amp;fit&#x3D;crop"
+                alt="Nein, noch nicht"
+                class="quiz-question__image"
+              />
+            </div>
+            <a
+              href="quiz-2.html"
+              class="quiz-question__option"
+              data-answer="noch_nicht"
+              onclick="saveQuizAnswer('q1', 'noch_nicht')"
+            >
+              <span class="quiz-question__option-text">Nein, noch nicht</span>
+            </a>
+          </div> -->
         </div>
       </div>
     </section>
