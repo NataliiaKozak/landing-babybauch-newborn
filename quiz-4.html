@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mit Leidenschaft halten wir deine schönsten Erinnerungen fest – von der Vorfreude bis zu den ersten Tagen deines Babys. Wir kreieren emotionale, zeitlose Bilder, die dich ein Leben lang begleiten."
+    />
+    <meta name="keywords" content="Fotoshooting, Babybauch, Newborn, Hagen" />
+    <title>Familien-Fotoshooting Erfahrung - Quiz</title>
+
+    <!-- Security Headers -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://script.google.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; img-src 'self' https: data:; font-src 'self' https: data:; frame-src https://www.google.com https://maps.google.com; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://cdn.jsdelivr.net"
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta
+      http-equiv="Referrer-Policy"
+      content="strict-origin-when-cross-origin"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="css/base-styles.css" rel="stylesheet" />
+    <link href="css/common.css" rel="stylesheet" />
+
+    <!-- Section-specific CSS -->
+    <link href="css/quiz-thanks/quiz-header.css" rel="stylesheet" />
+    <link href="css/quiz-thanks/quiz-question.css" rel="stylesheet" />
+    <link href="css/sections/legal-footer.css" rel="stylesheet" />
+    <!-- <link href="css/sections/hero.css" rel="stylesheet" />
+    <link href="css/sections/promotional.css" rel="stylesheet" />
+    <link href="css/sections/features.css" rel="stylesheet" />
+    <link href="css/sections/gallery.css" rel="stylesheet" />
+    <link href="css/sections/benefits.css" rel="stylesheet" />
+    <link href="css/sections/process.css" rel="stylesheet" />
+    <link href="css/sections/fullwidth-image.css" rel="stylesheet" />
+    <link href="css/sections/faq.css" rel="stylesheet" />
+    <link href="css/sections/services.css" rel="stylesheet" />
+    <link href="css/sections/about.css" rel="stylesheet" />
+    <link href="css/sections/footer.css" rel="stylesheet" />
+    <link href="css/sections/legal-footer.css" rel="stylesheet" />
+    <link href="css/quiz-thanks/quiz-question.css" rel="stylesheet" />
+    <link href="css/quiz-thanks/quiz-form.css" rel="stylesheet" />
+    <link href="css/quiz-thanks/thank-you-hero.css" rel="stylesheet" />
+    <link href="css/quiz-thanks/quiz-header.css" rel="stylesheet" />
+    <link href="css/sections/author-footer.css" rel="stylesheet" /> -->
+  </head>
+  <body>
+    <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  QUIZ HEADER - Шапка страницы квиза (лого + прогресс)                     ║
+     ║  Фон: через CSS класс bg-brand-primary (редактируется в css/base-styles.css)   ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+    <header class="quiz-header bg-brand-primary">
+      <div class="container">
+        <div class="quiz-header__content">
+          <!-- ЛОГОТИП -->
+          <div class="quiz-header__logo">
+            <a
+              href="index.html"
+              class="quiz-header__logo-text text-bold-big"
+              style="color: #3d3d3d"
+            >
+              Logo
+            </a>
+          </div>
+
+          <!-- ПРОГРЕСС / ПОДЗАГОЛОВОК-->
+          <div class="quiz-header__progress">
+            <p class="text-medium-small" style="color: #3d3d3d">
+              Weiter zum unverbindlichen Angebot 
+            </p>
+          </div>
+
+          <div class="quiz-header__progress">
+            <p class="text-medium-small" style="color: #3d3d3d">
+              Jetzt Termin anfragen & profitieren!
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  QUIZ QUESTION - Секция вопроса с вариантами ответов                       ║
+     ║  Поддерживает 2-4 варианта ответа с изображениями                          ║
+     ║  Фон: через CSS класс bg-brand-primary (редактируется в css/base-styles.css)   ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+    <section class="quiz-question bg-brand-primary" data-question-id="q4">
+      <div class="container">
+        <!-- ════════════════════════════════════════════════════════════════════════
+         ЗАГОЛОВОК ВОПРОСА
+         ════════════════════════════════════════════════════════════════════════ -->
+        <div class="quiz-question__title">
+          <h1 class="text-h2" style="color: #000000">
+            Schon mal ein Familien - Fotoshooting gehabt?
+          </h1>
+        </div>
+
+        <!-- ════════════════════════════════════════════════════════════════════════
+         КАРТОЧКИ ВАРИАНТОВ (картинка + кнопка)
+         ════════════════════════════════════════════════════════════════════════ -->
+        <div class="quiz-question__cards quiz-question__cards--2">
+          <div class="quiz-question__card">
+            <div class="quiz-question__image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1482517967863-00e15c9b44be?w&#x3D;300&amp;h&#x3D;300&amp;fit&#x3D;crop"
+                alt="Ja, das war der Hammer!"
+                class="quiz-question__image"
+              />
+            </div>
+            <a
+              href="quiz-form.html"
+              class="quiz-question__option"
+              data-answer="ja_hammer"
+              onclick="saveQuizAnswer('q4', 'ja_hammer')"
+            >
+              <span class="quiz-question__option-text"
+                >Ja, das war der Hammer!</span
+              >
+            </a>
+          </div>
+          <div class="quiz-question__card">
+            <div class="quiz-question__image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w&#x3D;300&amp;h&#x3D;300&amp;fit&#x3D;crop"
+                alt="Nein, bisher noch nicht!"
+                class="quiz-question__image"
+              />
+            </div>
+            <a
+              href="quiz-form.html"
+              class="quiz-question__option"
+              data-answer="nein_bisher_nicht"
+              onclick="saveQuizAnswer('q4', 'nein_bisher_nicht')"
+            >
+              <span class="quiz-question__option-text"
+                >Nein, bisher noch nicht!</span
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  LEGAL FOOTER - Юридический подвал (ссылки)                               ║
+     ║  Фон: через CSS класс bg-brand-primary (редактируется в css/base-styles.css)   ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+    <section class="legal-footer bg-brand-primary">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <!-- ════════════════════════════════════════════════════════════════════════
+           ЮРИДИЧЕСКИЕ ССЫЛКИ
+           Impressum, Datenschutz, Cookie Richtlinien
+           ════════════════════════════════════════════════════════════════════════ -->
+          <div class="col-12 text-center">
+            <nav class="legal-links">
+              <!-- ССЫЛКА - изменить href="..." и текст между > и </a> -->
+              <a href="impressum.html" class="legal-link">Impressum</a>
+              <span class="legal-separator">·</span>
+              <!-- ССЫЛКА - изменить href="..." и текст между > и </a> -->
+              <a href="datenschutz.html" class="legal-link"
+                >Datenschutzerklärung</a
+              >
+              <span class="legal-separator">·</span>
+              <!-- ССЫЛКА - изменить href="..." и текст между > и </a> -->
+              <a href="cookies.html" class="legal-link">Cookie Richtlinien</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Common JS -->
+    <script src="js/common.js"></script>
+
+    <!-- Page-specific JS -->
+    <script src="js/quiz.js"></script>
+  </body>
+</html>
