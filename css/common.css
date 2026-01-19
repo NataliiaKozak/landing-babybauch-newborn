@@ -113,7 +113,8 @@
   margin: 40px 0;
 }
 
-/* Section backgrounds */
+/* Section backgrounds ДУБЛЬ.
+   Эти классы делают то же самое, что и bg-brand-**/
 .bg-primary {
   background-color: var(--brand-primary);
 }

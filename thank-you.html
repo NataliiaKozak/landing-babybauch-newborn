@@ -29,10 +29,10 @@
     <link href="css/common.css" rel="stylesheet" />
 
     <!-- Section-specific CSS -->
+    <link href="css/sections/author-footer.css" rel="stylesheet" />
     <link href="css/quiz-thanks/quiz-header.css" rel="stylesheet" />
     <link href="css/quiz-thanks/thank-you-hero.css" rel="stylesheet" />
-    <link href="css/author-footer.css" rel="stylesheet" />
-    <link href="css/sections/author-footer.css" rel="stylesheet" />
+    <!-- <link href="css/author-footer.css" rel="stylesheet" /> -->
     <link href="css/sections/legal-footer.css" rel="stylesheet" />
   </head>
   <body>
@@ -68,7 +68,64 @@
      ║  Включает: заголовок, CTA календарь, контакты                              ║
      ║  Фон: через CSS класс bg-brand-primary (редактируется в css/base-styles.css)    ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+    <section class="author-footer bg-brand-primary">
+      <div class="container">
+        <div class="author-footer__content">
+          <div class="author-footer__info">
+            <!-- ROW 1: заголовок -->
+            <div class="row">
+              <div class="col-12">
+                <h2 class="author-footer__name text-h3" style="color: #000000">
+                  Super, vielen Dank !
+                </h2>
+              </div>
+            </div>
 
+            <!-- ROW 2: два фото 50/50 на всю ширину ряда -->
+            <div class="row mt-4">
+              <div class="col-12">
+                <div class="row g-4">
+                  <!-- ИЗМЕНЕНИЕ: g-4 = gap между двумя половинами, без новых классов -->
+
+                  <div class="col-12 col-md-6">
+                    <div class="thank-you-hero__image-wrapper">
+                      <img
+                        src="assets/images/babybauch/foto5.jpg"
+                        alt="Foto 1"
+                        class="thank-you-hero__image"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <div class="thank-you-hero__image-wrapper">
+                      <img
+                        src="assets/images/newborn/foto1.jpg"
+                        alt="Foto 2"
+                        class="thank-you-hero__image"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ROW 3: текст после фото -->
+            <div class="row mt-4">
+              <div class="col-12">
+                <div
+                  class="thank-you-hero__description text-medium-small"
+                  style="color: #000000"
+                >
+                  <p>Deine Anfrage ist bei uns eingegangen!</p>
+                  <p>Wir werden uns zeitnah bei dir melden 📞</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- <section class="author-footer bg-brand-primary">
       <div class="container">
         <div class="author-footer__content">
@@ -76,11 +133,6 @@
               <h2 class="author-footer__name text-h3" style="color: #000000">
               Super, vielen Dank !
             </h2>
-
-            <div>
-
-            </div>
-
             <div
                 class="thank-you-hero__description text-medium-small"
                 style="color: #000000"
@@ -92,25 +144,17 @@
                   Wir werden uns zeitnah bei dir melden 📞 
                 </p>
               </div>
-
-
-
-          
-
-            
-
-            
           </div>
         </div>
       </div>
     </section> -->
 
-    <section class="author-footer bg-brand-primary">
+    <!-- <section class="author-footer bg-brand-primary">
       <div class="container">
         <div class="author-footer__content">
-          <!-- ROW 1: только текст -->
-          <div class="row">
-            <!-- <div class="col-12">
+          
+          <div class="row"> -->
+    <!-- <div class="col-12">
               <div class="author-footer__info">
                 <h2 class="author-footer__name text-h3" style="color: #000000">
                   Super, vielen Dank !
@@ -125,12 +169,13 @@
                 </div>
               </div>
             </div> -->
-            <div class="row mt-4">
-              <div class="col-12">
-                <div class="row g-4">
-                  <!-- ИЗМЕНЕНИЕ: g-4 даёт gap между половинами, без новых классов -->
 
-                  <div class="col-md-6">
+    <!-- <div class="row mt-4">
+              <div class="col-12">
+                <div class="row g-4"> -->
+    <!-- ИЗМЕНЕНИЕ: g-4 даёт gap между половинами, без новых классов -->
+
+    <!-- <div class="col-md-6">
                     <div class="thank-you-hero__image-wrapper">
                       <img
                         src="assets/images/newborn/foto6.jpg"
@@ -152,15 +197,15 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
-          <!-- ROW 2: два фото в ряд с gap -->
-          <!-- <div class="row mt-4">
+    <!-- ROW 2: два фото в ряд с gap -->
+    <!-- <div class="row mt-4">
             <div class="col-12">
               <div class="thank-you-hero__secondary-buttons"> -->
-                <!-- ИЗМЕНЕНИЕ: используем существующий класс-контейнер для flex+gap (без новых классов) -->
+    <!-- ИЗМЕНЕНИЕ: используем существующий класс-контейнер для flex+gap (без новых классов) -->
 
-                <!-- <div class="thank-you-hero__image-wrapper">
+    <!-- <div class="thank-you-hero__image-wrapper">
                   <img
                     src="assets/images/newborn/foto6.jpg"
                     alt="Foto 1"
@@ -168,19 +213,19 @@
                   />
                 </div> -->
 
-                <!-- <div class="thank-you-hero__image-wrapper">
+    <!-- <div class="thank-you-hero__image-wrapper">
                   <img
                     src="assets/images/newborn/foto2.jpg"
                     alt="Foto 2"
                     class="thank-you-hero__image"
                   />
                 </div> -->
-              </div>
+    <!-- </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  AUTHOR FOOTER - Блок информации об авторе + соц.сети                      ║
@@ -402,7 +447,7 @@
           <div class="col-lg-6">
             <div class="thank-you-hero__image-wrapper">
               <img
-                src="assets/images/babybauch/foto1.jpg"
+                src="assets/images/newborn/foto8.jpg"
                 alt="Thank you"
                 class="thank-you-hero__image"
               />

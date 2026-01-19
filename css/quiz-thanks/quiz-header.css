@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  align-items: start;
+  align-items: flex-start;
 }
 
 /* Logo */
@@ -26,10 +26,13 @@
 }
 
 .quiz-header__logo-text {
-  font-size: 45px;
-  font-weight: 700;
+  /* font-size: 45px; */
+  font-size: var(--font-h2);
+  /* font-weight: 700; */
+  font-weight: var(--font-weight-bold);
   text-decoration: none;
-  color: var(--brand-text, #3D3D3D);
+  /* color: var(--brand-text, #3d3d3d); */
+  color: var(--brand-text);
   transition: opacity 0.3s ease;
 }
 
@@ -49,8 +52,10 @@
 
 .quiz-header__progress p {
   margin: 0;
-  font-size: 22px;
-  font-weight: 500;
+  /* font-size: 22px; */
+  font-size: var(--font-body);
+  /* font-weight: 500; */
+  font-weight: var(--font-weight-medium);
 }
 
 /* ============================================================================
