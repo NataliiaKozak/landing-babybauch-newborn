@@ -22,6 +22,7 @@
 /* Logo */
 .quiz-header__logo {
   margin: 0;
+  margin-bottom: 10px;
 }
 
 .quiz-header__logo-text {
