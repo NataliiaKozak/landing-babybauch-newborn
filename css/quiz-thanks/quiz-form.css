@@ -54,7 +54,9 @@
   border: 1px solid #000000;
   border-radius: 0;
   outline: none;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .quiz-form__input::placeholder {
@@ -63,7 +65,7 @@
 }
 
 .quiz-form__input:focus {
-  border-color: #E2C08D;
+  border-color: #e2c08d;
   box-shadow: 0 0 0 2px rgba(226, 192, 141, 0.2);
 }
 
@@ -90,7 +92,7 @@
   min-width: 20px;
   margin: 0;
   cursor: pointer;
-  accent-color: #E2C08D;
+  accent-color: #e2c08d;
 }
 
 .quiz-form__checkbox-label {
@@ -107,7 +109,7 @@
 }
 
 .quiz-form__privacy-link:hover {
-  color: #E2C08D;
+  color: #e2c08d;
 }
 
 /* Submit button */
@@ -115,14 +117,15 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 300px;
+  width: 400px;
   height: 66px;
   margin-top: 20px;
+  margin-bottom: 20px;
   font-size: 22px;
   font-weight: 500;
   font-family: 'Inter', sans-serif;
   color: #ffffff;
-  background-color: #E2C08D;
+  background-color: #e2c08d;
   border: none;
   border-radius: 30px;
   cursor: pointer;
@@ -163,7 +166,7 @@
 .quiz-form__image-placeholder {
   width: 100%;
   height: 100%;
-  background-color: #7F7F7F;
+  background-color: #7f7f7f;
   border-radius: 40px;
 }
 

@@ -1,6 +1,6 @@
 /* Hero Section Specific Styles */
 
-.hero {
+/* .hero {
   position: relative;
 }
 
@@ -17,35 +17,35 @@
 
 .hero-image {
   position: absolute;
-}
+} */
 
 /* FIGMA: Image 1 - right side, top: 80px, 428x394px */
-.hero-image:first-child {
+/* .hero-image:first-child {
   right: 0;
   top: 80px;
   width: 428px;
   height: 394px;
   z-index: 1;
-}
+} */
 
 /* FIGMA: Image 2 - overlaps from bottom-left of image 1, top: 258px, 306x290px */
-.hero-image:nth-child(2) {
+/* .hero-image:nth-child(2) {
   right: 230px;
   top: 258px;
   width: 306px;
   height: 290px;
   z-index: 2;
-}
+} */
 
 /* FIGMA: Hero button - 286x70px */
-.hero .btn-primary-custom {
+/* .hero .btn-primary-custom {
   min-width: 286px;
   min-height: 70px;
   max-width: 100%;
-}
+} */
 
 /* Responsive adjustments */
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
   .hero-images {
     margin-top: 40px;
     min-height: 400px;
@@ -95,16 +95,16 @@
     right: 45%;
     transform: translateX(70%);
   }
-}
+} */
 
-@media (max-width: 576px) {
-  /* Убираем фиксированную высоту секции */
-  .hero {
+/* @media (max-width: 576px) { */
+/* Убираем фиксированную высоту секции */
+/* .hero {
     min-height: auto !important;
-  }
+  } */
 
-  /* Порядок: Лого (вне row) -> Картинки -> Текст -> Кнопка */
-  .hero-row {
+/* Порядок: Лого (вне row) -> Картинки -> Текст -> Кнопка */
+/* .hero-row {
     display: flex;
     flex-direction: column;
   }
@@ -136,26 +136,26 @@
     align-items: flex-start;
     width: 100%;
     min-height: auto !important;
-  }
+  } */
 
-  /* Убираем absolute позиционирование на мобильном */
-  .hero-image {
+/* Убираем absolute позиционирование на мобильном */
+/* .hero-image {
     position: relative !important;
     top: auto !important;
     right: auto !important;
     left: auto !important;
     transform: none !important;
-  }
+  } */
 
-  /* Первая картинка */
-  .hero-image:first-child {
+/* Первая картинка */
+/* .hero-image:first-child {
     width: 55%;
     max-width: none;
     z-index: 1;
-  }
+  } */
 
-  /* Вторая картинка - накладывается */
-  .hero-image:nth-child(2) {
+/* Вторая картинка - накладывается */
+/* .hero-image:nth-child(2) {
     width: 55%;
     max-width: none;
     margin-left: -15%;
@@ -168,5 +168,150 @@
     min-width: auto;
     width: 100%;
     padding: 0 20px;
+  }
+} */
+
+/* Hero Section Specific Styles */
+
+.hero {
+  position: relative;
+}
+
+/* --- НОВОЕ: общий layout 3 колонки (картинка - центр - картинка) --- */
+.hero-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  /* ИЗМЕНЕНИЕ: добавили flex-раскладку вместо absolute-картинок */
+  /* если по макету расстояние меньше/больше — править gap (например 24px / 60px) */
+}
+
+.hero-center {
+  flex: 1;
+  max-width: 520px;
+  text-align: center;
+  /* ИЗМЕНЕНИЕ: центрируем Logo и текст  */
+  /* если блок должен быть уже/шире — правь max-width */
+}
+
+.hero-logo {
+  margin: 0 0 18px 0;
+  /* ИЗМЕНЕНИЕ: отступ под Logo чтобы совпало со скрином */
+  /*  если Logo ближе к заголовку — уменьшить margin-bottom */
+}
+
+.hero-title {
+  margin: 0 0 18px 0;
+  /* ИЗМЕНЕНИЕ: контролируем расстояние до описания */
+}
+
+.hero-title-accent {
+  color: #848484;
+  /* ИЗМЕНЕНИЕ: серый хвост заголовка как у тебя в HTML */
+}
+
+.hero-description {
+  margin: 0;
+  max-width: 386px;
+  margin-inline: auto;
+  /* ИЗМЕНЕНИЕ: описание по центру и ограничено по ширине  */
+  /* если текст должен быть уже — уменьши max-width */
+}
+
+/* боковые колонки с картинками */
+.hero-side {
+  flex: 0 0 300px;
+  display: flex;
+  justify-content: center;
+  /* ИЗМЕНЕНИЕ: фиксируем ширину боковых блоков как на скрине (вертикальные фото) */
+  /* Предлагаю: если фото шире/уже по макету — меняй 220px */
+}
+
+/* общие стили для фото */
+.hero-photo {
+  display: block;
+  width: 100%;
+  border-radius: 40px;
+  object-fit: cover;
+  /* ИЗМЕНЕНИЕ: убираем img-fluid + absolute, чтобы фото выглядели как блоки */
+}
+
+/* боковые фото (слева/справа) */
+.hero-photo--side {
+  height: 350px;
+  /* ИЗМЕНЕНИЕ: делаем вертикальные фото как на скрине */
+  /* Предлагаю: если по макету выше/ниже — поменяй height */
+}
+
+/* нижняя картинка */
+.hero-bottom {
+  display: flex;
+  justify-content: center;
+  margin-top: 42px;
+  /* ИЗМЕНЕНИЕ: нижнее фото по центру и отступ сверху */
+  /* Предлагаю: если фото должно быть ближе к тексту — уменьшить margin-top */
+}
+
+.hero-photo--bottom {
+  width: 300px;
+  height: 350px;
+  /* ИЗМЕНЕНИЕ: нижний вертикальный блок как на скрине */
+  /* Предлагаю: если по макету другой размер — правь width/height */
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+/* Планшет: можно складывать в колонку */
+@media (max-width: 991px) {
+  .hero-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    /* ИЗМЕНЕНИЕ: на планшете делаем stack: левое фото, центр, правое фото */
+  }
+
+  .hero-side {
+    flex: 0 0 auto;
+    width: 240px;
+    /* ИЗМЕНЕНИЕ: фиксируем ширину, чтобы фото не растягивалось на 100% */
+    /* Предлагаю: если нужно шире — 280px */
+  }
+
+  .hero-photo--side {
+    height: 280px;
+    /* ИЗМЕНЕНИЕ: можно чуть увеличить высоту на stacked-режиме */
+  }
+
+  .hero-bottom {
+    margin-top: 28px;
+    /* ИЗМЕНЕНИЕ: меньше отступ на планшете */
+  }
+
+  .hero-photo--bottom {
+    width: 240px;
+    /* ИЗМЕНЕНИЕ: на планшете ширина нижнего фото как у боковых (hero-side width: 240px) */
+
+    height: 280px;
+    /* ИЗМЕНЕНИЕ: на планшете высота нижнего фото как у боковых (hero-photo--side height: 280px) */
+  }
+}
+
+/* Мобилка: всё по центру, компактнее */
+@media (max-width: 576px) {
+  .hero-side {
+    width: 200px;
+    /* ИЗМЕНЕНИЕ: меньше ширина фото на мобиле */
+  }
+
+  .hero-photo--side {
+    height: 240px;
+    /* ИЗМЕНЕНИЕ: меньше высота фото на мобиле */
+  }
+
+  .hero-photo--bottom {
+    width: 200px;
+    height: 240px;
+    /* ИЗМЕНЕНИЕ: меньше нижнее фото на мобиле . не 240*/
   }
 }

@@ -8,6 +8,14 @@
   padding: 20px 10px;
 }
 
+.services h2 {
+    margin-left: auto;
+    /* ИЗМЕНЕНИЕ: заголовок секции по центру даже с max-width */
+    margin-right: auto;
+    /* ИЗМЕНЕНИЕ: заголовок секции по центру */
+  }
+
+  
 /* Cascade effect - each card shifts down */
 /* .services .row > div:nth-child(2) .service-card {
   margin-top: 26px;
@@ -46,8 +54,23 @@
 
 /* Responsive adjustments */
 @media (max-width: 991px) {
+  .services {
+    text-align: center;
+    /* ИЗМЕНЕНИЕ: центрируем заголовок и текст карточек на адаптиве */
+  }
+
+ 
+
   .service-card {
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
+    padding: 10px 10px;
+  }
+
+  .service-card p {
+    margin-left: auto;
+    /* ИЗМЕНЕНИЕ: параграфы в карточках по центру, если есть max-width */
+    margin-right: auto;
+    /* ИЗМЕНЕНИЕ: параграфы в карточках по центру */
   }
 
   /* Reset cascade on tablet */
@@ -76,4 +99,6 @@
   .service-image img {
     max-width: 200px;
   }
+
+  
 }

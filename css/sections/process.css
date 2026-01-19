@@ -20,9 +20,14 @@
   flex-shrink: 0;
 }
 
+.process h2 {
+  text-align: center;
+  
+}
 .process-icon img,
 .process-icon .img-placeholder {
   display: block;
+  border-radius: 20px;
 }
 
 .process-divider {
@@ -71,7 +76,36 @@
 }
 
 /* Responsive adjustments */
+@media (max-width: 991px) {
+  .process {
+    text-align: center;
+    /* ИЗМЕНЕНИЕ: центрируем весь текст секции на адаптиве */
+  }
+
+  .process-step-header {
+    align-items: center;
+    /* ИЗМЕНЕНИЕ: заголовок шага и иконка по центру */
+  }
+
+  .process-icon {
+    justify-content: center;
+    /* ИЗМЕНЕНИЕ: иконка шага по центру */
+  }
+
+  .process-divider {
+    margin-left: auto;
+    /* ИЗМЕНЕНИЕ: линия по центру */
+    margin-right: auto;
+    /* ИЗМЕНЕНИЕ: линия по центру */
+  }
+}
+
+
 @media (max-width: 768px) {
+  /* .process {
+    text-align: center;
+    /* ИЗМЕНЕНИЕ: центрируем весь текст секции на адаптиве */
+   */
   /* Horizontal layout: icon and title in one row */
   .process-step-header {
     flex-direction: row;
@@ -80,8 +114,10 @@
   }
 
   .process-step {
-    margin-bottom: 20px;
+    padding: 0px 0;
   }
+
+  
 
   .process-icon img {
     width: 60px !important;
@@ -92,6 +128,8 @@
     width: 60px !important;
     height: 60px !important;
   }
+
+  
 }
 
 @media (max-width: 576px) {

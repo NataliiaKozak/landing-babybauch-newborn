@@ -71,102 +71,54 @@
   </head>
 
   <body>
-    <!--SECTION 1 Hero -->
+    <!-- SECTION 1 Hero -->
     <section
       class="hero section-padding bg-brand-primary"
       style="min-height: 634px"
     >
       <div class="container">
-        <!-- ЛОГОТИП - отдельно для мобильной версии -->
-        <h2 class="text-h2 hero-logo-mobile d-lg-none mb-4">Logo</h2>
-
-        <div class="row hero-row">
-          <!-- ════════════════════════════════════════════════════════════════════════
-           ЛЕВАЯ КОЛОНКА - Текст
-           ════════════════════════════════════════════════════════════════════════ -->
-          <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 hero-text-col">
-            <div class="hero-content" style="padding-top: 53px">
-              <!-- ЛОГОТИП - только для десктопа -->
-              <h2 class="text-h2 mb-5 hero-logo d-none d-lg-block">Logo</h2>
-
-              <!-- ГЛАВНЫЙ ЗАГОЛОВОК H1 - самый важный текст на странице -->
-              <!-- <h1 class="text-h1 mb-4 hero-title" style="max-width: 629px"> -->
-              <!-- Выделенная часть (другой цвет) -->
-              <!-- <span style="color: #848484">Kostenloses</span><br /> -->
-              <!-- Основной текст заголовка -->
-              <!-- Familien und Kinder- Fotoshooting!
-              </h1> -->
-
-              <!-- ГЛАВНЫЙ ЗАГОЛОВОК H1 - самый важный текст на странице, изменения по шаблону-->
-              <h1 class="text-h1 mb-4 hero-title" style="max-width: 629px">
-                <!-- Основной текст заголовка -->
-                Nur ich und mein Wunder<!-- Выделенная часть (другой цвет) -->
-                <span style="color: #848484">– für immer festgehalten</span>
-              </h1>
-
-              <!-- ОПИСАНИЕ - краткий текст под заголовком (поддерживает HTML)/ шаблон и изменения по макету -->
-              <!-- <p
-                class="text-medium-small mb-4 hero-description"
-                style="max-width: 386px"
-              >
-                <strong>Familienbilder</strong>, die sich ideal als ein
-                <strong>Weihnachtsgeschenk</strong> eignen.
-              </p> -->
-
-              <p
-                class="text-regular-small mb-4 hero-description"
-                style="max-width: 386px"
-              >
-                Unvergessliche Erinnerungen an Deine besondere Zeit als werdende
-                Mama oder frischgebackene Eltern.
-              </p>
-              <!-- КНОПКА CTA - призыв к действию -->
-              <!-- Изменить текст: между > и </a> -->
-              <!-- Изменить ссылку: href="..." -->
-
-              <!-- закоммитина кнопка, ее в макете нет" -->
-              <!-- <a
-                href="quiz-1.html"
-                class="btn btn-primary-custom mt-3 hero-cta"
-              >
-                Button
-              </a> -->
-            </div>
+        <div class="hero-layout">
+          <!-- Левая картинка -->
+          <div class="hero-side hero-side--left">
+            <img
+              src="assets/images/babybauch/foto1.jpg"
+              alt="Babybauch Foto"
+              class="hero-photo hero-photo--side"
+            />
           </div>
 
-          <!-- ════════════════════════════════════════════════════════════════════════
-           ПРАВАЯ КОЛОНКА - Изображения
-           ════════════════════════════════════════════════════════════════════════ -->
-          <div class="col-lg-6 col-md-12 hero-images-col">
-            <div
-              class="hero-images position-relative"
-              style="min-height: 474px"
-            >
-              <!-- ИЗОБРАЖЕНИЕ: изменить src="..." для замены картинки -->
-              <div class="hero-image" style="">
-                <img
-                  src="/assets/images/babybauch/foto1.jpg"
-                  alt=""
-                  class="img-fluid"
-                />
-              </div>
-              <!-- ИЗОБРАЖЕНИЕ: изменить src="..." для замены картинки -->
-              <div class="hero-image" style="">
-                <img
-                  src="/assets/images/newborn/foto2.jpg"
-                  alt=""
-                  class="img-fluid"
-                />
-              </div>
-              <div class="hero-image" style="">
-                <img
-                  src="/assets/images/newborn/foto1.jpg"
-                  alt=""
-                  class="img-fluid"
-                />
-              </div>
-            </div>
+          <!-- Центр: Logo + текст -->
+          <div class="hero-center">
+            <h2 class="text-h2 hero-logo">Logo</h2>
+
+            <h2 class="text-bold-big hero-title">
+              Nur ich und mein Wunder
+              <span class="hero-title-accent">– für immer festgehalten</span>
+            </h2>
+
+            <p class="text-medium-small hero-description">
+              Unvergessliche Erinnerungen an Deine besondere Zeit als werdende
+              Mama oder frischgebackene Eltern.
+            </p>
           </div>
+
+          <!-- Правая картинка -->
+          <div class="hero-side hero-side--right">
+            <img
+              src="assets/images/newborn/foto2.jpg"
+              alt="Newborn Foto"
+              class="hero-photo hero-photo--side"
+            />
+          </div>
+        </div>
+
+        <!-- Нижняя картинка по центру -->
+        <div class="hero-bottom">
+          <img
+            src="assets/images/newborn/foto1.jpg"
+            alt="Newborn Foto"
+            class="hero-photo hero-photo--bottom"
+          />
         </div>
       </div>
     </section>
@@ -187,7 +139,7 @@
             <div class="promotional-image">
               <!-- ИЗОБРАЖЕНИЕ - изменить src="..." и alt="..." -->
               <img
-                src="/assets/images/babybauch/foto8.jpg"
+                src="assets/images/babybauch/foto8.jpg"
                 alt="Babybauchshooting"
                 class="img-fluid"
               />
@@ -217,12 +169,14 @@
                 sind nur bis zum 20.11.25
               </div> -->
               <div class="text-medium-small mb-4" style="max-width: 608px">
-                Für werdende Mamas & frischgebackene Eltern
-                <br /><br />
+                <span class="promotional-list-title"
+                  >Für werdende Mamas & frischgebackene Eltern</span
+                >
 
-                <ul>
+                <ul class="promotional-bullets">
+                  <!-- ИЗМЕНЕНИЕ: добавила класс, чтобы убрать дефолтные отступы ul и сделать единый стиль списка -->
                   <li>
-                    <strong>Persönliches Shooting im Studio in Hagen </strong>
+                    <strong>Persönliches Shooting im Studio in Hagen</strong>
                   </li>
                   <li>
                     <strong>Liebevolle Atmosphäre & natürliche Bilder</strong>
@@ -305,11 +259,13 @@
 
               <!-- СПИСОК - пункты с буллетами (опционально) -->
               <div class="text-medium-small mb-4" style="max-width: 520px">
-                <strong>Studio Eigenschaften: </strong>
-                <ul>
+                <strong class="features-list-title"
+                  >Studio Eigenschaften:
+                </strong>
+                <ul class="features-bullets">
                   <li>mehrere Hallen</li>
                   <li>Kulissen</li>
-                  <li>professionelle Ausstattung</li>
+                  <li>Professionelle Ausstattung</li>
                   <li>Schmink- und Umkleidebereich</li>
                 </ul>
               </div>
@@ -361,7 +317,7 @@
               "
             >
               <img
-                src="/assets/images/newborn/foto2.jpg"
+                src="assets/images/newborn/foto2.jpg"
                 alt="Neugeborenenshooting"
                 class="img-fluid"
                 style="width: 428px; height: 440px"
@@ -404,7 +360,7 @@
               <div class="gallery-item">
                 <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
                 <img
-                  src="/assets/images/babybauch/foto13.jpg"
+                  src="assets/images/babybauch/foto13.jpg"
                   alt="Babybauchshooting"
                   class="img-fluid"
                   loading="lazy"
@@ -416,7 +372,7 @@
               <div class="gallery-item">
                 <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
                 <img
-                  src="/assets/images/babybauch/foto5.jpg"
+                  src="assets/images/babybauch/foto5.jpg"
                   alt="Babybauchshooting"
                   class="img-fluid"
                   loading="lazy"
@@ -428,7 +384,7 @@
               <div class="gallery-item">
                 <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
                 <img
-                  src="/assets/images/newborn/foto1.jpg"
+                  src="assets/images/newborn/foto1.jpg"
                   alt="Neugeborenenshooting"
                   class="img-fluid"
                   loading="lazy"
@@ -440,7 +396,7 @@
               <div class="gallery-item">
                 <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
                 <img
-                  src="/assets/images/babybauch/foto7.jpeg"
+                  src="assets/images/babybauch/foto7.jpeg"
                   alt="Babybauchshooting"
                   class="img-fluid"
                   loading="lazy"
@@ -452,7 +408,7 @@
               <div class="gallery-item">
                 <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
                 <img
-                  src="/assets/images/newborn/foto6.jpg"
+                  src="assets/images/newborn/foto6.jpg"
                   alt="Neugeborenenshooting"
                   class="img-fluid"
                   loading="lazy"
@@ -464,7 +420,7 @@
               <div class="gallery-item">
                 <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
                 <img
-                  src="/assets/images/newborn/foto4.jpg"
+                  src="assets/images/newborn/foto4.jpg"
                   alt="Neugeborenenshooting"
                   class="img-fluid"
                   loading="lazy"
@@ -861,8 +817,6 @@
      ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  FULLWIDTH IMAGE - Полноширинное изображение                              ║
      ║  Растягивается на всю ширину экрана (без container)                       ║
-     ║  Идеально для больших атмосферных фото между секциями                     ║
-     ║  Поддерживает overlappingImages для накладывающихся изображений           ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
     <section
       class="fullwidth-image bg-brand-secondary"
@@ -872,7 +826,7 @@
         <div class="fullwidth-image__wrapper">
           <!-- ОСНОВНОЕ ИЗОБРАЖЕНИЕ - изменить src="..." и alt="..." -->
           <img
-            src="/assets/images/newborn/foto5.jpg"
+            src="assets/images/newborn/foto5.jpg"
             alt="Babybauchshooting"
             class="fullwidth-image__img"
             style=""
@@ -1027,7 +981,7 @@
          ══════════════════════════════════════════════════════════════════════════ -->
         <div class="row mb-5">
           <div class="col-12">
-            <h2 class="text-h3" style="max-width: 883px">
+            <h2 class="text-h3 text-center" style="max-width: 883px">
               Rückmeldung der Eltern
             </h2>
           </div>
@@ -1043,7 +997,7 @@
               <!-- ИЗОБРАЖЕНИЕ УСЛУГИ - изменить src="..." для замены -->
               <div class="service-image mb-3">
                 <img
-                  src="/assets/images/babybauch/foto8.jpg"
+                  src="assets/images/babybauch/foto8.jpg"
                   alt="Family Time"
                   class="img-fluid"
                 />
@@ -1063,7 +1017,7 @@
               <!-- ИЗОБРАЖЕНИЕ УСЛУГИ - изменить src="..." для замены -->
               <div class="service-image mb-3">
                 <img
-                  src="/assets/images/babybauch/foto11.jpg"
+                  src="assets/images/babybauch/foto11.jpg"
                   alt="Kinder-Fotoshooting"
                   class="img-fluid"
                 />
@@ -1083,7 +1037,7 @@
               <!-- ИЗОБРАЖЕНИЕ УСЛУГИ - изменить src="..." для замены -->
               <div class="service-image mb-3">
                 <img
-                  src="/assets/images/babybauch/foto1.jpg"
+                  src="assets/images/babybauch/foto1.jpg"
                   alt="Babybauch &amp; Newborn"
                   class="img-fluid"
                 />
@@ -1103,7 +1057,7 @@
               <!-- ИЗОБРАЖЕНИЕ УСЛУГИ - изменить src="..." для замены -->
               <div class="service-image mb-3">
                 <img
-                  src="/assets/images/babybauch/foto7.jpeg"
+                  src="assets/images/babybauch/foto7.jpeg"
                   alt="Und vieles mehr!"
                   class="img-fluid"
                 />

@@ -11,7 +11,7 @@
 
 .promotional-image img,
 .promotional-image .img-placeholder {
-  border-radius: 0;
+  border-radius: 40px;
 }
 
 .promotional-content {
@@ -20,6 +20,44 @@
 
 .promotional-cta a:hover {
   opacity: 0.8;
+}
+
+.promotional-list-title {
+  display: inline-block;
+  /* ИЗМЕНЕНИЕ: чтобы margin-bottom работал (inline элемент его не даёт визуально) */
+
+  margin-bottom: 14px;
+  /* ИЗМЕНЕНИЕ:  расстояние между названием и пунктами списка */
+}
+
+.promotional-bullets {
+  list-style: none;
+  /* ИЗМЕНЕНИЕ: убрано стандартные маркеры браузера */
+
+  padding-left: 0;
+  /* ИЗМЕНЕНИЕ: убрано стандартный левый отступ ul */
+
+  margin: 0;
+  /* ИЗМЕНЕНИЕ: убрано стандартные margin у ul (чтобы отступ был только от заголовка) */
+}
+
+.promotional-bullets li {
+  position: relative;
+  padding-left: 25px;
+  /* ИЗМЕНЕНИЕ: место под маркер-галочку */
+
+  margin-bottom: 10px;
+  /* ИЗМЕНЕНИЕ: расстояние между пунктами */
+}
+
+.promotional-bullets li::before {
+  content: '✓';
+  /* ИЗМЕНЕНИЕ: маркер как в секции 3 (галочка) */
+
+  position: absolute;
+  left: 0;
+  color: #e2c08d;
+  font-weight: bold;
 }
 
 /* Responsive adjustments */
@@ -32,24 +70,69 @@
   .promotional-content {
     padding-left: 0 !important;
     margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .promotional-content .line-divider {
+    margin-left: auto;
+    /* ИЗМЕНЕНИЕ: линия центрируется */
+    margin-right: auto;
+    /* ИЗМЕНЕНИЕ: линия центрируется */
+  }
+
+  .promotional-content .col-12.text-start {
+    text-align: center !important;
+    /* ИЗМЕНЕНИЕ: переопределяем text-start для кнопки, чтобы она была по центру */
+  }
+
+  .promotional-bullets {
+    display: inline-block;
+    /* ИЗМЕНЕНИЕ: список становится блоком по центру */
+
+    text-align: left;
+    /* ИЗМЕНЕНИЕ: пункты списка остаются “ровными” и читаемыми */
   }
 
   .promotional-image {
-    max-width: 100%;
+    /* max-width: 100%; */
+    /* /* max-width: 360px; */
+    /* max-width: 240px; */
+    margin-inline: auto;
   }
+
 }
 
 @media (max-width: 768px) {
-  .promotional-image .img-placeholder {
+  /* .promotional-image .img-placeholder {
     width: 100%;
     max-width: 350px;
     height: auto;
     aspect-ratio: 1 / 1;
+  } */
+
+  .promotional-image {
+    max-width: 320px;
+    /* ИЗМЕНЕНИЕ: ещё меньше ширина на 768px */
   }
 }
 
 @media (max-width: 576px) {
-  .promotional-image .img-placeholder {
+  /* .promotional-image .img-placeholder {
     max-width: 280px;
+  } */
+  .promotional-image {
+    max-width: 200px;
+    /* ИЗМЕНЕНИЕ: как было для placeholder, но теперь работает и для img */
+    margin-inline: auto; /* ИЗМЕНЕНИЕ: центрируем фото */
+  }
+  .promotional-image img {
+    width: 200px;
+    /* ИЗМЕНЕНИЕ: фиксируем ширину фото 200px */
+
+    height: 240px;
+    /* ИЗМЕНЕНИЕ: фиксируем высоту фото 240px */
+
+    object-fit: cover;
+    /* ИЗМЕНЕНИЕ: чтобы фото не растягивалось, а красиво обрезалось */
   }
 }
