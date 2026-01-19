@@ -71,7 +71,10 @@
   </head>
 
   <body>
-    <!-- SECTION 1 Hero -->
+    <!-- SECTION 1
+     ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  HERO        
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
     <section
       class="hero section-padding bg-brand-primary"
       style="min-height: 634px"
@@ -126,8 +129,6 @@
     <!-- SECTION 2
      ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  PROMOTIONAL - Промо-секция с изображением слева и текстом справа         ║
-     ║  Фон: через CSS класс bg-brand-secondary (редактируется в css/base-styles.css)   ║
-     ║  centered: true - режим без изображения, центрированный текст             ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
     <section class="promotional section-padding bg-brand-secondary">
       <div class="container">
@@ -152,10 +153,6 @@
           <div class="col-lg-7 col-md-12">
             <div class="promotional-content" style="padding-left: 100px">
               <!-- ЗАГОЛОВОК - изменить текст между тегами - в шаблоне-->
-              <!-- <h2 class="text-bold-big mb-4">
-                Erinnerungen an eine besondere Zeit – einfühlsam & natürlich
-              </h2> -->
-
               <h2 class="text-bold-big mb-4">
                 Erinnerungen an eine besondere Zeit
                 <span style="color: #e2c08d">– einfühlsam & natürlich</span>
@@ -164,11 +161,10 @@
               <!-- ОПИСАНИЕ - изменить текст (можно использовать <br> и <p>) -->
               <div class="text-medium-small mb-4" style="max-width: 608px">
                 <span class="promotional-list-title"
-                  >Für werdende Mamas  &amp; frischgebackene Eltern</span
+                  >Für werdende Mamas &amp; frischgebackene Eltern</span
                 >
 
                 <ul class="promotional-bullets">
-                  <!-- ИЗМЕНЕНИЕ: добавила класс, чтобы убрать дефолтные отступы ul и сделать единый стиль списка -->
                   <li>
                     <strong>Persönliches Shooting im Studio in Hagen</strong>
                   </li>
@@ -201,7 +197,7 @@
     <!-- SECTION 3
      ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  FEATURES - Секция с описанием и изображениями                            ║
-     ║  Фон: через CSS класс bg-brand-primary (редактируется в css/base-styles.css)   ║
+     ║  
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
     <section class="features section-padding bg-brand-primary">
       <div class="container">
@@ -216,22 +212,9 @@
                 Informationen zum Aufnahmeformat
               </h2>
 
-              <!-- ПОДЗАГОЛОВОК - дополнительный текст под заголовком -->
-              <!-- <p class="text-medium-small mb-3" style="font-style: italic">
-                Familien-Fotoshooting – liebevoll &amp; natürlich
-              </p> -->
-
               <p class="text-medium-small mb-3">
                 Babybauch- & Neugeborenenshootings in Hagen
               </p>
-
-              <!-- ОПИСАНИЕ - основной текст секции -->
-              <!-- Поддерживает HTML: <p>, <br>, <strong>, <em> -->
-              <!-- <div class="text-medium-small mb-4" style="max-width: 520px">
-                Ich nehme mir viel Zeit und schaffe eine entspannte Atmosphäre,
-                in der echte, authentische Momente mit eurer Familie entstehen
-                dürfen – voller Nähe, Herzlichkeit und echter Emotionen.
-              </div> -->
 
               <!-- СПИСОК - пункты с буллетами (опционально) -->
               <div class="text-medium-small mb-4" style="max-width: 520px">
@@ -314,9 +297,7 @@
     <!-- SECTION 4
      ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  GALLERY - Галерея изображений (Swiper.js слайдер)                        ║
-     ║  Фон: через CSS класс bg-brand-primary (редактируется в css/base-styles.css)   ║
-     ║  Стрелки: showArrows: true/false                                          ║
-     ║  Пагинация: showPagination: true/false                                    ║
+     ║                                 
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
 
     <section
@@ -326,9 +307,7 @@
       <div class="container">
         <!-- ══════════════════════════════════════════════════════════════════════════
          SWIPER ГАЛЕРЕЯ
-         singleImage: true - режим одного большого изображения
          imageHeight: высота изображений в пикселях (по умолчанию 350)
-         imageBorderRadius: border-radius в пикселях
          ══════════════════════════════════════════════════════════════════════════ -->
         <div class="swiper gallery-swiper">
           <div class="swiper-wrapper">
@@ -419,8 +398,6 @@
     <!-- SECTION 5
      ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  BENEFITS - Секция с преимуществами (карточки с иконками)                 ║
-     ║  Фон: через CSS класс bg-brand-primary (редактируется в css/base-styles.css)   ║
-     ║  Варианты layout: 3col (3 колонки), 4col (4 колонки), 2x2 (сетка 2x2)     ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
     <section class="benefits section-padding bg-brand-primary">
       <div class="container">
@@ -612,10 +589,8 @@
 
     <!-- SECTION 6
     ╔═══════════════════════════════════════════════════════════════════════════╗
-     ║  PROCESS - Секция с шагами/этапами процесса                               ║
-     ║  Фон: через CSS класс bg-brand-secondary (редактируется в css/base-styles.css)   ║
-     ║  Варианты layout: horizontal (4 в ряд), vertical (2x2 сетка)              ║
-     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+    ║  PROCESS - Секция с шагами/этапами процесса                               ║
+    ╚═══════════════════════════════════════════════════════════════════════════╝ -->
 
     <section class="process section-padding bg-brand-secondary">
       <div class="container">
@@ -814,7 +789,6 @@
     <!-- SECTION 8
      ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  FAQ - Часто задаваемые вопросы (аккордеон)                               ║
-     ║  Фон: через CSS класс bg-brand-primary (редактируется в css/base-styles.css)   ║
      ║  Первый вопрос открыт по умолчанию, остальные закрыты                     ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
     <section class="faq section-padding bg-brand-primary">
@@ -946,9 +920,7 @@
 
     <!-- SECTION 9
      ╔═══════════════════════════════════════════════════════════════════════════╗
-     ║  SERVICES - Секция с услугами (карточки с изображениями)                  ║
-     ║  Фон: через CSS класс bg-brand-secondary (редактируется в css/base-styles.css)   ║
-     ║  Варианты layout: flat (центрированный), grid (сетка)                     ║
+     ║  SERVICES - Секция с отзывами (карточки с изображениями)                  ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
     <section class="services section-padding bg-brand-secondary">
       <div class="container">
@@ -1137,20 +1109,6 @@
               />
             </div>
           </div>
-
-          <!-- ════════════════════════════════════════════════════════════════════════
-           КОЛОНКА С ФОТО
-           ════════════════════════════════════════════════════════════════════════ -->
-          <!-- <div class="col-md-5 mb-4 mb-md-0">
-            <div class="about-photo"> -->
-          <!-- ФОТО - изменить src="..." для замены изображения -->
-          <!-- <img
-                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w&#x3D;466&amp;h&#x3D;560&amp;fit&#x3D;crop"
-                alt="JS-Photography"
-                class="img-fluid"
-              />
-            </div> -->
-          <!-- </div> -->
         </div>
       </div>
     </section>
@@ -1158,8 +1116,7 @@
     <!-- SECTION 11
      ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  FOOTER - Подвал с картой Google Maps                                     ║
-     ║  Фон: через CSS класс bg-brand-white (редактируется в css/base-styles.css)   ║
-     ║  Высота: height (например: "450px")                                       ║
+     ║  
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
     <footer class="footer bg-brand-white" id="contact">
       <div class="container-fluid p-0">
@@ -1169,18 +1126,6 @@
              GOOGLE MAPS - встроенная карта
              Изменить src="..." на свою ссылку Google Maps Embed
              ══════════════════════════════════════════════════════════════════════════ -->
-            <!-- <iframe
-              src="https://www.google.com/maps/embed?pb&#x3D;!1m18!1m12!1m3!1d77837.95399533!2d9.7320!3d52.3759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b00d259c4f73a1%3A0x4236659fda043d0!2sHannover!5e0!3m2!1sde!2sde!4v1704067200000"
-              width="100%"
-              height="450"
-              style="border: 0"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              sandbox="allow-scripts allow-same-origin"
-              title="Standort auf Google Maps"
-            >
-            </iframe> -->
-
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d134092.97042791278!2d7.337165317356269!3d51.35471559427528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b93b7fd73c28db%3A0x4360d62681d936d6!2z0KXQsNCz0LXQvQ!5e0!3m2!1sru!2sde!4v1768750841268!5m2!1sru!2sde"
               width="100%"
@@ -1199,7 +1144,6 @@
     <!-- SECTION 12
      ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  LEGAL FOOTER - Юридический подвал (ссылки)                               ║
-     ║  Фон: через CSS класс bg-brand-primary (редактируется в css/base-styles.css)   ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
     <section class="legal-footer bg-brand-primary">
       <div class="container">

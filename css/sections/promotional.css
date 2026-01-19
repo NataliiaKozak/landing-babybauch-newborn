@@ -23,36 +23,24 @@
 }
 
 .promotional-list-title {
-  display: inline-block;
-  /* ИЗМЕНЕНИЕ: чтобы margin-bottom работал (inline элемент его не даёт визуально) */
-
-  margin-bottom: 14px;
-  /* ИЗМЕНЕНИЕ:  расстояние между названием и пунктами списка */
+  display: inline-block;  /*  чтобы margin-bottom работал */
+  margin-bottom: 14px;  /*  расстояние между названием и пунктами списка */
 }
 
 .promotional-bullets {
-  list-style: none;
-  /* ИЗМЕНЕНИЕ: убрано стандартные маркеры браузера */
-
-  padding-left: 0;
-  /* ИЗМЕНЕНИЕ: убрано стандартный левый отступ ul */
-
-  margin: 0;
-  /* ИЗМЕНЕНИЕ: убрано стандартные margin у ul (чтобы отступ был только от заголовка) */
+  list-style: none;  /* убрано стандартные маркеры браузера */
+  padding-left: 0;  /*  убрано стандартный левый отступ ul */
+  margin: 0;  /* убрано стандартные margin у ul (чтобы отступ был только от заголовка) */
 }
 
 .promotional-bullets li {
   position: relative;
-  padding-left: 25px;
-  /* ИЗМЕНЕНИЕ: место под маркер-галочку */
-
-  margin-bottom: 10px;
-  /* ИЗМЕНЕНИЕ: расстояние между пунктами */
+  padding-left: 25px;  /* место под маркер-галочку */
+  margin-bottom: 10px;  /* расстояние между пунктами */
 }
 
 .promotional-bullets li::before {
-  content: '✓';
-  /* ИЗМЕНЕНИЕ: маркер как в секции 3 (галочка) */
+  content: '✓';   /* маркер как в секции 3  */
 
   position: absolute;
   left: 0;
@@ -62,7 +50,6 @@
 
 /* Responsive adjustments */
 @media (max-width: 991px) {
-  /* Text first, image second on mobile */
   .promotional .row {
     flex-direction: column-reverse;
   }
@@ -74,23 +61,17 @@
   }
 
   .promotional-content .line-divider {
-    margin-left: auto;
-    /* ИЗМЕНЕНИЕ: линия центрируется */
+    margin-left: auto; /*  линия центрируется */
     margin-right: auto;
-    /* ИЗМЕНЕНИЕ: линия центрируется */
   }
 
   .promotional-content .col-12.text-start {
-    text-align: center !important;
-    /* ИЗМЕНЕНИЕ: переопределяем text-start для кнопки, чтобы она была по центру */
+    text-align: center !important; /* переопределяем text-start для кнопки, чтобы она была по центру */
   }
 
   .promotional-bullets {
-    display: inline-block;
-    /* ИЗМЕНЕНИЕ: список становится блоком по центру */
-
-    text-align: left;
-    /* ИЗМЕНЕНИЕ: пункты списка остаются “ровными” и читаемыми */
+    display: inline-block; /* список становится блоком по центру */
+    text-align: left; /* пункты списка остаются “ровными” и читаемыми */
   }
 
   .promotional-image {
@@ -99,7 +80,6 @@
     /* max-width: 240px; */
     margin-inline: auto;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -111,8 +91,7 @@
   } */
 
   .promotional-image {
-    max-width: 320px;
-    /* ИЗМЕНЕНИЕ: ещё меньше ширина на 768px */
+    max-width: 320px; /* ещё меньше ширина на 768px */
   }
 }
 
@@ -121,18 +100,12 @@
     max-width: 280px;
   } */
   .promotional-image {
-    max-width: 200px;
-    /* ИЗМЕНЕНИЕ: как было для placeholder, но теперь работает и для img */
-    margin-inline: auto; /* ИЗМЕНЕНИЕ: центрируем фото */
+    max-width: 200px; /* как было для placeholder, но теперь работает и для img */
+    margin-inline: auto; /* центрируем фото */
   }
   .promotional-image img {
-    width: 200px;
-    /* ИЗМЕНЕНИЕ: фиксируем ширину фото 200px */
-
-    height: 240px;
-    /* ИЗМЕНЕНИЕ: фиксируем высоту фото 240px */
-
-    object-fit: cover;
-    /* ИЗМЕНЕНИЕ: чтобы фото не растягивалось, а красиво обрезалось */
+    width: 200px; /* фиксируем ширину фото 200px */
+    height: 240px; /*  фиксируем высоту фото 240px */
+    object-fit: cover; /* чтобы фото не растягивалось, а красиво обрезалось */
   }
 }

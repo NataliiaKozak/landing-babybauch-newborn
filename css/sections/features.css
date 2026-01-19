@@ -42,8 +42,7 @@
 
 .features-list-title {
   display: inline-block; /* strong блочным (inline-block), чтобы margin-bottom начал работать */
-  margin-bottom: 14px;
-  /*  расстояние между "Studio Eigenschaften:" и пунктами списка */
+  margin-bottom: 14px;  /*  расстояние между "Studio Eigenschaften:" и пунктами списка */
 }
 
 /* Bullet Points List */
@@ -100,33 +99,25 @@
   }
 
   .features-content {
-    text-align: center;
-    /* ИЗМЕНЕНИЕ: весь текст секции 3 по центру на адаптиве */
+    text-align: center;    /* весь текст секции 3 по центру */
   }
 
   .features-content .line-divider {
-    margin-left: auto;
-    /* ИЗМЕНЕНИЕ: линия центрируется */
-    margin-right: auto;
-    /* ИЗМЕНЕНИЕ: линия центрируется */
+    margin-left: auto;    /* линия центрируется */
+    margin-right: auto;    /* линия центрируется */
   }
 
   .features-content .col-12.text-start {
-    text-align: center !important;
-    /* ИЗМЕНЕНИЕ: переопределяем text-start для кнопки, чтобы она была по центру */
+    text-align: center !important;    /* переопределяем text-start для кнопки, чтобы она была по центру */
   }
 
   .features-bullets {
-    display: inline-block;
-    /* ИЗМЕНЕНИЕ: список становится блоком по центру */
-
-    text-align: left;
-    /* ИЗМЕНЕНИЕ: пункты списка остаются “ровными” и читаемыми */
+    display: inline-block;    /*  список становится блоком по центру */
+    text-align: left;    /*  пункты списка остаются “ровными” и читаемыми */
   }
 
   .features-list-title {
-    display: block;
-    /* ИЗМЕНЕНИЕ: заголовок списка нормально центрируется (а не inline-block слева) */
+    display: block;    /*  заголовок списка нормально центрируется (а не inline-block слева) */
   }
 
   .features-frame {
@@ -189,11 +180,8 @@
 @media (max-width: 576px) {
   .features-frame {
     padding: 10px;
-    max-width: 200px;
-    /* ИЗМЕНЕНИЕ: ширина рамки как у Hero-фото  */
-
-    margin-inline: auto;
-    /* ИЗМЕНЕНИЕ: центрируем рамку */
+    max-width: 200px;    /* ширина рамки как у Hero-фото  */
+    margin-inline: auto;    /* центрируем рамку */
   }
 
   .features-images {
@@ -201,14 +189,9 @@
   }
 
   .features-frame img {
-    width: 200px;
-    /* ИЗМЕНЕНИЕ: фиксируем ширину фото 200px */
-
-    height: 240px;
-    /* ИЗМЕНЕНИЕ: фиксируем высоту фото 240px */
-
-    object-fit: cover;
-    /* ИЗМЕНЕНИЕ: чтобы фото не растягивалось, а обрезалось */
+    width: 200px;    /* фиксируем ширину фото 200px */
+    height: 240px;    /* фиксируем высоту фото 240px */
+    object-fit: cover;    /*  чтобы фото не растягивалось, а обрезалось */
   }
 
   .features-image:nth-child(2) {
@@ -216,9 +199,7 @@
   }
 
   .features-bullets li {
-    margin-bottom: 8px;
-    /* больше расстояние между пунктами на моб */
-    padding-left: 20px;
-    /* меньше отступ под маркер */
+    margin-bottom: 8px;    /* больше расстояние между пунктами  */
+    padding-left: 20px;    /* меньше отступ под маркер */
   }
 }

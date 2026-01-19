@@ -78,25 +78,20 @@
 /* Responsive adjustments */
 @media (max-width: 991px) {
   .process {
-    text-align: center;
-    /* ИЗМЕНЕНИЕ: центрируем весь текст секции на адаптиве */
+    text-align: center;    /*  центрируем весь текст секции */
   }
 
   .process-step-header {
-    align-items: center;
-    /* ИЗМЕНЕНИЕ: заголовок шага и иконка по центру */
+    align-items: center;    /* заголовок шага и иконка по центру */
   }
 
   .process-icon {
-    justify-content: center;
-    /* ИЗМЕНЕНИЕ: иконка шага по центру */
+    justify-content: center;    /* иконка шага по центру */
   }
 
   .process-divider {
-    margin-left: auto;
-    /* ИЗМЕНЕНИЕ: линия по центру */
-    margin-right: auto;
-    /* ИЗМЕНЕНИЕ: линия по центру */
+    margin-left: auto;     /* линия по центру */
+    margin-right: auto;    /* линия по центру */
   }
 }
 

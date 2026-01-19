@@ -36,39 +36,26 @@
 
 /* Responsive adjustments */
 @media (max-width: 991px) {
-.about .about-content {
-    text-align: center;
-    /* ИЗМЕНЕНИЕ: центрируем весь текст секции About на адаптиве */
+  .about .about-content {
+    text-align: center; /*  центрируем весь текст секции About на адаптиве */
   }
 
   .about .line-divider {
-    margin-left: auto;
-    /* ИЗМЕНЕНИЕ: линия по центру */
-    margin-right: auto;
-    /* ИЗМЕНЕНИЕ: линия по центру */
+    margin-left: auto; /*  линия по центру */
+    margin-right: auto; /*  линия по центру */
   }
 
   .about .text-medium-small {
-    margin-left: auto;
-    /* ИЗМЕНЕНИЕ: если стоит max-width, центрируем блок текста */
-    margin-right: auto;
-    /* ИЗМЕНЕНИЕ: если стоит max-width, центрируем блок текста */
+    margin-left: auto; /*  если стоит max-width, центрируем блок текста */
+    margin-right: auto; /* если стоит max-width, центрируем блок текста */
   }
 
   .about-photo img {
-    width: 240px;
-    /* ИЗМЕНЕНИЕ: фиксируем ширину фото как в Hero на планшете */
-
-    height: 280px;
-    /* ИЗМЕНЕНИЕ: фиксируем высоту фото как в Hero на планшете */
-
-    object-fit: cover;
-    /* ИЗМЕНЕНИЕ: чтобы фото не растягивалось */
-
-    margin-inline: auto;
-    /* ИЗМЕНЕНИЕ: центрируем фото */
-    display: block;
-    /* ИЗМЕНЕНИЕ: чтобы margin-inline работал корректно */
+    width: 240px; /* фиксируем ширину фото как в Hero на планшете */
+    height: 280px; /*  фиксируем высоту фото как в Hero на планшете */
+    object-fit: cover; /* чтобы фото не растягивалось */
+    margin-inline: auto; /*  центрируем фото */
+    display: block; /* чтобы margin-inline работал корректно */
   }
 }
 @media (max-width: 768px) {
@@ -95,18 +82,10 @@
   } */
 
   .about-photo img {
-    width: 200px;
-    /* ИЗМЕНЕНИЕ: фиксируем ширину фото как в Hero на мобиле */
-
-    height: 240px;
-    /* ИЗМЕНЕНИЕ: фиксируем высоту фото как в Hero на мобиле */
-
-    object-fit: cover;
-    /* ИЗМЕНЕНИЕ: чтобы фото не растягивалось */
-
-    margin-inline: auto;
-    /* ИЗМЕНЕНИЕ: центрируем фото */
-    display: block;
-    /* ИЗМЕНЕНИЕ: чтобы margin-inline работал корректно */
+    width: 200px; /* фиксируем ширину фото как в Hero  */
+    height: 240px;    /*  фиксируем высоту фото как в Hero  */
+    object-fit: cover; /*  чтобы фото не растягивалось */
+    margin-inline: auto; /*  центрируем фото */
+    display: block; /*  чтобы margin-inline работал корректно */
   }
 }

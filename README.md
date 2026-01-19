@@ -1,8 +1,57 @@
-# Фотосессии новорождённых
+# Лендинг "Фотосессии новорождённых"
 
 ## Структура
 
-...
+project-root/
+├─ assets/
+│ ├─ icons/ # SVG/PNG icons (social, UI)
+│ └─ images/ # Photos for the landing + quiz pages
+│ ├─ babybauch/ # Pregnancy (Babybauch) photos
+│ └─ newborn/ # Newborn photos
+├─ css/
+│ ├─ quiz-thanks/ # Styles for quiz flow + form + thank-you page
+│ │ ├─ quiz-form.css
+│ │ ├─ quiz-header.css
+│ │ ├─ quiz-question.css
+│ │ └─ thank-you-hero.css
+│ ├─ sections/ # Styles for landing page sections (index.html)
+│ │ ├─ about.css
+│ │ ├─ author-footer.css
+│ │ ├─ benefits.css
+│ │ ├─ faq.css
+│ │ ├─ features.css
+│ │ ├─ footer.css
+│ │ ├─ fullwidth-image.css
+│ │ ├─ gallery.css
+│ │ ├─ hero.css
+│ │ ├─ legal-footer.css
+│ │ ├─ process.css
+│ │ ├─ promotional.css
+│ │ └─ services.css
+│ ├─ base-styles.css # Design tokens (CSS variables), base settings
+│ ├─ bootstrap.min.css # Local Bootstrap build
+│ └─ common.css # Typography utilities, buttons, shared helpers
+├─ js/
+│ ├─ bootstrap.bundle.min.js # Bootstrap JS bundle (local)
+│ ├─ common.js # Shared scripts (if used across pages)
+│ ├─ gallery-swiper.js # Swiper gallery initialization for the landing page
+│ └─ quiz.js # Quiz logic (saving answers, form submit, navigation)
+├
+├─ index.html # Main landing page
+├─ quiz-1.html # Quiz
+├─ quiz-2.html # Quiz
+├─ quiz-3.html # Quiz
+├─ quiz-4.html # Quiz
+├─ quiz-5.html # Quiz
+├─ quiz-6.html # Quiz
+├─ quiz-7.html # Quiz
+├─ quiz-8.html # Quiz
+├─ quiz-9.html # Quiz
+├─ quiz-10.html # Quiz
+├─ quiz-form.html # Final registration form page
+├─ thank-you.html # Thank-you page after successful submission
+├─ README.md
+└─ .gitignore
 
 ## CSS
 
@@ -68,9 +117,8 @@ CSS переменные (Design Tokens):
 - Валидация формы
 - Отправка на Google Sheets
 
-В этом лендинге два направления: "Фотосессии беременных" и "Фотосессии новорождённых". Если выбрать "Фотосессии новорождённых", то попадаeм на квизы для новорождённых.
+В этом лендинге два направления: "Фотосессии беременных" и "Фотосессии новорождённых". Если выбрать "Фотосессии новорождённых", то попадаeм на квизы для новорождённых, а именно:
 
-Логика:
 • quiz-1.html → ветка:
 o Babybauch → quiz-2.html
 o Newborn → quiz-6.html

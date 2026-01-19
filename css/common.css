@@ -51,7 +51,7 @@
 }
 
 /* Button styles */
-/* FIGMA: Кнопки закруглённые (30px), высота 70px (primary) / 60px (outline) */
+/* Кнопки закруглённые, высота 70px (primary) / 60px (outline) */
 .btn-primary-custom {
   background-color: var(--brand-accent);
   border: none;
@@ -113,8 +113,7 @@
   margin: 40px 0;
 }
 
-/* Section backgrounds ДУБЛЬ.
-   Эти классы делают то же самое, что и bg-brand-**/
+/* Section backgrounds ДУБЛЬ. Эти классы делают то же самое, что и bg-brand-**/
 .bg-primary {
   background-color: var(--brand-primary);
 }
