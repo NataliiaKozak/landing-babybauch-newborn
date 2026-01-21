@@ -171,15 +171,7 @@
   .quiz-question__cards {
     flex-direction: column;
     gap: 20px;
-  }
-
-  .quiz-question__card,
-  .quiz-question__cards--2 .quiz-question__card,
-  .quiz-question__cards--3 .quiz-question__card {
-    flex: 0 0 100%;
-    width: 100%;
-    max-width: 100%;
-    gap: 10px;
+    align-items: center;
   }
 
   .quiz-question__image-wrapper {
@@ -195,6 +187,21 @@
 
   .quiz-question__option-text {
     white-space: normal;
+  }
+
+  .quiz-question__card,
+  .quiz-question__cards--2 .quiz-question__card,
+  .quiz-question__cards--3 .quiz-question__card {
+    flex: 0 0 100%;
+    /* width: 100%;
+        max-width: 100%; */
+    width: 240px;
+    max-width: 240px;  /* для уменьшения размера */
+    gap: 10px;
+  }
+
+  .quiz-question__card {
+    gap: 0;  /* для уменьшения размера */
   }
 }
 
@@ -229,5 +236,13 @@
   .quiz-question__option--multiline {
     height: auto;
     min-height: 70px;
+  }
+
+  /* для уменьшения размера */
+  .quiz-question__card,
+  .quiz-question__cards--2 .quiz-question__card,
+  .quiz-question__cards--3 .quiz-question__card {
+    width: 200px;
+    max-width: 200px;
   }
 }
