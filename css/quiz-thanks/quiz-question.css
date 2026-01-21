@@ -25,7 +25,7 @@
 .quiz-question__cards {
   display: flex;
   gap: 14px;
-  padding: 0 2px;
+  padding: 40px 2px;
 }
 
 .quiz-question__cards--2,

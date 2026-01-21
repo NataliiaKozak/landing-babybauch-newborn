@@ -10,7 +10,7 @@
 .quiz-header__content {
   display: flex;
   flex-direction: column;
-  gap: 12px; /* было 40/80 */
+  gap: 10px; /* было 40/80 */
   align-items: flex-start;
 }
 
@@ -39,10 +39,12 @@
 /* Progress text */
 .quiz-header__progress {
   margin-top: 0;
+  margin-bottom: 5px;
 }
 
 .quiz-header__progress p {
   margin: 0;
+  margin-bottom: 5px;
   font-size: var(--font-body);
   font-weight: var(--font-weight-medium);
 }
