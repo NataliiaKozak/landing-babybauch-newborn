@@ -1,5 +1,3 @@
-
-
 /* =========================
    BENEFITS
    ========================= */
@@ -10,7 +8,7 @@
 
 .benefit-card {
   padding: 12px; /* меньше отступы внутри */
-  text-align: left; 
+  text-align: left;
 }
 
 .benefit-head {
@@ -49,14 +47,18 @@
 
 /* <768: иконка + заголовок в одну строку */
 @media (max-width: 768px) {
+  .benefits {
+    text-align: left;
+  }
+
   .benefit-card {
     padding: 10px;
-    text-align: center;
+    text-align: left;
   }
 
   .benefit-head {
     flex-direction: row; /* в одну линию */
-    justify-content: center; /* по центру */
+    justify-content: flex-start; /* уже не по центру */
     align-items: center;
     gap: 12px;
   }
@@ -65,7 +67,11 @@
     text-align: left;
   }
   .benefit-divider {
-    margin-left: auto;
-    margin-right: auto; /* линия по центру */
-}
+    /* margin-left: auto;
+    margin-right: auto; 
+    display: none;
+    /* margin-left: 0;
+    margin-right: 0; */
+    display: none;
+  }
 }

@@ -2,6 +2,7 @@
 
 .hero {
   position: relative;
+  min-height: 634px;
 }
 
 /* --- общий layout 3 колонки (картинка - центр - картинка) --- */
@@ -69,6 +70,10 @@
   height: 385px; /* нижний вертикальный блок. если по макету другой размер — править width/height */
 }
 
+/* .hero > .container > .hero-logo {
+  display: none;
+} */
+
 /* ---------------- RESPONSIVE ---------------- */
 
 /* Планшет*/
@@ -105,9 +110,24 @@
 
 /* Моб: всё по центру, компактнее */
 @media (max-width: 576px) {
+  .hero {
+    min-height: auto; /* или unset */
+  }
+  
   .hero-side {
     width: 200px; /*  меньше ширина фото  */
   }
+
+
+  /* .hero > .container > .hero-logo {
+    display: block;
+    text-align: center;
+    margin: 0 0 12px 0;
+  }
+
+  .hero-center .hero-logo {
+    display: none;
+  } ломается верстка */
 
   .hero-photo--side {
     height: 240px; /*  меньше высота фото  */
