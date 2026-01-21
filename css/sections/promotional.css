@@ -7,13 +7,12 @@
 .promotional-image {
   width: 100%;
   max-width: 428px;
-  /* по макету */
-  /* width: 372px; */
-  /* height: 523px; */
 }
 
-.promotional-image img,
-.promotional-image .img-placeholder {
+.promotional-image img {
+  display: block;
+  width: 100%;
+  height: auto; /* десктоп */
   border-radius: 10px;
 }
 
@@ -26,24 +25,24 @@
 }
 
 .promotional-list-title {
-  display: inline-block;  /*  чтобы margin-bottom работал */
-  margin-bottom: 14px;  /*  расстояние между названием и пунктами списка */
+  display: inline-block; /*  чтобы margin-bottom работал */
+  margin-bottom: 14px; /*  расстояние между названием и пунктами списка */
 }
 
 .promotional-bullets {
-  list-style: none;  /* убрано стандартные маркеры браузера */
-  padding-left: 0;  /*  убрано стандартный левый отступ ul */
-  margin: 0;  /* убрано стандартные margin у ul (чтобы отступ был только от заголовка) */
+  list-style: none; /* убрано стандартные маркеры браузера */
+  padding-left: 0; /*  убрано стандартный левый отступ ul */
+  margin: 0; /* убрано стандартные margin у ul (чтобы отступ был только от заголовка) */
 }
 
 .promotional-bullets li {
   position: relative;
-  padding-left: 25px;  /* место под маркер-галочку */
-  margin-bottom: 10px;  /* расстояние между пунктами */
+  padding-left: 25px; /* место под маркер-галочку */
+  margin-bottom: 10px; /* расстояние между пунктами */
 }
 
 .promotional-bullets li::before {
-  content: '✓';   /* маркер как в секции 3  */
+  content: '✓'; /* маркер как в секции 3  */
 
   position: absolute;
   left: 0;
@@ -54,13 +53,14 @@
 /* Responsive adjustments */
 @media (max-width: 991px) {
   .promotional .row {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .promotional-content {
     padding-left: 0 !important;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     text-align: center;
+    margin-bottom: 0;
   }
 
   .promotional-content .line-divider {
@@ -78,37 +78,24 @@
   }
 
   .promotional-image {
-    /* max-width: 100%; */
-    /* /* max-width: 360px; */
-    /* max-width: 240px; */
+    max-width: 240px;
     margin-inline: auto;
   }
-}
 
-@media (max-width: 768px) {
-  /* .promotional-image .img-placeholder {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    aspect-ratio: 1 / 1;
-  } */
-
-  .promotional-image {
-    max-width: 320px; /* ещё меньше ширина на 768px */
+  .promotional-image img {
+    height: 280px;
+    object-fit: cover;
+  }
+  .promotional .line-divider {
+    display: none;
   }
 }
 
 @media (max-width: 576px) {
-  /* .promotional-image .img-placeholder {
-    max-width: 280px;
-  } */
   .promotional-image {
     max-width: 200px; /* как было для placeholder, но теперь работает и для img */
-    margin-inline: auto; /* центрируем фото */
   }
   .promotional-image img {
-    width: 200px; /* фиксируем ширину фото 200px */
     height: 240px; /*  фиксируем высоту фото 240px */
-    object-fit: cover; /* чтобы фото не растягивалось, а красиво обрезалось */
   }
 }

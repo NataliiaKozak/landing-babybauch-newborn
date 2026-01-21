@@ -148,11 +148,12 @@
           </div>
 
           <!-- ════════════════════════════════════════════════════════════════════════
-           ПРАВАЯ КОЛОНКА - Контент
+           ПРАВАЯ КОЛОНКА - Контент 
+           <div class="promotional-content" style="padding-left: 0px">
            ════════════════════════════════════════════════════════════════════════ -->
           <div class="col-lg-7 col-md-12">
             <!-- было style="padding-left: 100px" -->
-            <div class="promotional-content" style="padding-left: 0px">
+            <div class="promotional-content">
               <!-- ЗАГОЛОВОК -->
               <!-- text-h2 или text-bold-big. был  text-bold-big-->
               <h2 class="text-h2 mb-4">
@@ -182,11 +183,8 @@
                 </div>
               </div>
 
-              <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ -->
-              <div
-                class="line-divider mb-4"
-                style="max-width: 588px; border-bottom: 1px solid #3d3d3d"
-              ></div>
+              <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ style="max-width: 588px; border-bottom: 1px solid #3d3d3d"-->
+              <div class="line-divider mb-4"></div>
 
               <!-- ОПИСАНИЕ 2 (после линии) - изменить текст -->
 
@@ -226,18 +224,6 @@
               </p>
 
               <!-- СПИСОК - пункты с буллетами (опционально) -->
-              <!-- <div class="text-medium-small mb-4" style="max-width: 520px">
-                <strong class="features-list-title"
-                  >Studio Eigenschaften:
-                </strong>
-                <ul class="features-bullets">
-                  <li>mehrere Hallen</li>
-                  <li>Kulissen</li>
-                  <li>Professionelle Ausstattung</li>
-                  <li>Schmink- und Umkleidebereich</li>
-                </ul>
-              </div> -->
-
               <div class="text-medium-small mb-4" style="max-width: 520px">
                 <p class="text-bold-small mb-2">Studio Eigenschaften:</p>
 
@@ -249,11 +235,8 @@
                 </ul>
               </div>
 
-              <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ - удалить этот блок если не нужна -->
-              <div
-                class="line-divider mb-4"
-                style="max-width: 618px; border-bottom: 1px solid #3d3d3d"
-              ></div>
+              <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ - удалить этот блок если не нужнаstyle="max-width: 618px; border-bottom: 1px solid #3d3d3d" -->
+              <div class="line-divider mb-4"></div>
 
               <!-- КНОПКА CTA - призыв к действию -->
               <!-- Изменить текст: между > и </a> -->
@@ -286,21 +269,24 @@
            ════════════════════════════════════════════════════════════════════════ -->
           <div class="col-lg-6 col-md-12">
             <!-- ОДНО ИЗОБРАЖЕНИЕ В РАМКЕ - со слоганом внизу 
-             по шваблону падинги для div 75px 62px 78px 66px и width для img width: 365px-->
-            <div
-              class="features-frame"
-              style="
+             по шваблону падинги для div 75px 62px 78px 66px и width для img width: 365px
+             <div
+              class="features-frame" style="
                 background-color: #f8f8f8;
                 padding: 32px 34px 40px 31px;
                 max-width: 493px;
                 margin-left: auto;
-              "
-            >
-              <img
+              " <img
                 src="assets/images/newborn/foto2.jpg"
                 alt="Neugeborenenshooting"
                 class="img-fluid"
                 style="width: 428px; height: 440px"
+              />-->
+            <div class="features-frame">
+              <img
+                src="assets/images/newborn/foto2.jpg"
+                alt="Neugeborenenshooting"
+                class="features-frame__img"
               />
 
               <!-- СЛОГАН/TAGLINE - текст под изображением в рамке -->
