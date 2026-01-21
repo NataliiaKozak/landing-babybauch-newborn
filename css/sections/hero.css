@@ -9,63 +9,64 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 40px;  /* добавили flex-раскладку вместо absolute-картинок. если по макету расстояние меньше/больше — править gap (например 24px / 60px) */
+  gap: 40px; /* добавили flex-раскладку вместо absolute-картинок. если по макету расстояние меньше/больше — править gap (например 24px / 60px) */
 }
 
 .hero-center {
   flex: 1;
   max-width: 520px;
-  text-align: center;  /* центрируем Logo и текст.если блок должен быть уже/шире — править max-width */
+  text-align: center; /* центрируем Logo и текст.если блок должен быть уже/шире — править max-width */
 }
 
 .hero-logo {
-  margin: 0 0 18px 0;  /* отступ под Logo чтобы совпало со скрином. если Logo ближе к заголовку — уменьшить margin-bottom */
+  margin: 0 0 18px 0; /* отступ под Logo чтобы совпало со скрином. если Logo ближе к заголовку — уменьшить margin-bottom */
 }
 
 .hero-title {
-  margin: 0 0 18px 0;  /* контролируем расстояние до описания */
+  margin: 0 0 18px 0; /* контролируем расстояние до описания */
 }
 
 .hero-title-accent {
-  color: #848484;  /* серый хвост заголовка  */
+  color: #848484; /* серый хвост заголовка  */
 }
 
 .hero-description {
   margin: 0;
   max-width: 386px;
-  margin-inline: auto;  /* описание по центру и ограничено по ширине.если текст должен быть уже — уменьшить max-width */
+  margin-inline: auto; /* описание по центру и ограничено по ширине.если текст должен быть уже — уменьшить max-width */
 }
 
 /* боковые колонки с картинками */
 .hero-side {
   flex: 0 0 300px;
   display: flex;
-  justify-content: center;  /* фиксируем ширину боковых блоков. если фото шире/уже по макету —  220px */
+  justify-content: center; /* фиксируем ширину боковых блоков. если фото шире/уже по макету —  220px */
 }
 
 /* общие стили для фото */
 .hero-photo {
   display: block;
   width: 100%;
-  border-radius: 40px;
-  object-fit: cover;  /* убираем img-fluid + absolute, чтобы фото выглядели как блоки */
+  border-radius: 10px;
+  object-fit: cover; /* убираем img-fluid + absolute, чтобы фото выглядели как блоки */
 }
 
 /* боковые фото (слева/справа) */
 .hero-photo--side {
-  height: 350px;  /* делаем вертикальные фото. если по макету выше/ниже — поменять height */
+  width: 300px;
+  height: 385px; /* делаем вертикальные фото. если по макету выше/ниже — поменять height */
 }
 
 /* нижняя картинка */
 .hero-bottom {
   display: flex;
   justify-content: center;
-  margin-top: 42px;  /* нижнее фото по центру и отступ сверху. если фото должно быть ближе к тексту — уменьшить margin-top */
+  margin-top: 42px; /* нижнее фото по центру и отступ сверху. если фото должно быть ближе к тексту — уменьшить margin-top */
 }
 
 .hero-photo--bottom {
   width: 300px;
-  height: 350px;  /* нижний вертикальный блок. если по макету другой размер — править width/height */
+  height: 385px; /* нижний вертикальный блок. если по макету другой размер — править width/height */
 }
 
 /* ---------------- RESPONSIVE ---------------- */
@@ -75,40 +76,40 @@
   .hero-layout {
     flex-direction: column;
     align-items: center;
-    gap: 24px;    /*  делаем stack: левое фото, центр, правое фото */
+    gap: 24px; /*  делаем stack: левое фото, центр, правое фото */
   }
 
   .hero-side {
     flex: 0 0 auto;
-    width: 240px;    /* фиксируем ширину, чтобы фото не растягивалось на 100%. если нужно шире — 280px */
+    width: 240px; /* фиксируем ширину, чтобы фото не растягивалось на 100%. если нужно шире — 280px */
   }
 
   .hero-photo--side {
-    height: 280px;    /* можно чуть увеличить высоту на stacked-режиме */
+    height: 280px; /* можно чуть увеличить высоту на stacked-режиме */
   }
 
   .hero-bottom {
-    margin-top: 28px;    /* меньше отступ */
+    margin-top: 28px; /* меньше отступ */
   }
 
   .hero-photo--bottom {
-    width: 240px;    /* ширина нижнего фото как у боковых (hero-side width: 240px) */
-    height: 280px;    /*  высота нижнего фото как у боковых (hero-photo--side height: 280px) */
+    width: 240px; /* ширина нижнего фото как у боковых (hero-side width: 240px) */
+    height: 280px; /*  высота нижнего фото как у боковых (hero-photo--side height: 280px) */
   }
 }
 
 /* Моб: всё по центру, компактнее */
 @media (max-width: 576px) {
   .hero-side {
-    width: 200px;    /*  меньше ширина фото  */
+    width: 200px; /*  меньше ширина фото  */
   }
 
   .hero-photo--side {
-    height: 240px;    /*  меньше высота фото  */
+    height: 240px; /*  меньше высота фото  */
   }
 
   .hero-photo--bottom {
     width: 200px;
-    height: 240px;    /*  меньше нижнее фото. не 240*/
+    height: 240px; /*  меньше нижнее фото. не 240*/
   }
 }

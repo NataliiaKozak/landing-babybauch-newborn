@@ -1,147 +1,92 @@
-/* Process/Steps Section Specific Styles */
-
 .process {
   position: relative;
 }
 
-.process-step {
-  padding: 20px 0;
+.process h2 {
+  text-align: center;
 }
 
-.process-step-header {
+/* Колонка-карточка: растягиваем карточку по высоте колонки */
+.process-step {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  padding: 1rem 0; /* компактнее чем 20px */
+}
+
+/* (1) Иконка и заголовок на одном уровне */
+.process-step-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* (4) отступ между иконкой и заголовком */
+  margin-bottom: 0.75rem;
 }
 
 .process-icon {
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
-  flex-shrink: 0;
+  justify-content: center;
 }
 
-.process h2 {
-  text-align: center;
-  
-}
-.process-icon img,
-.process-icon .img-placeholder {
+/* (4) Оптимальный размер иконки (без !important) */
+.process-icon img {
+  width: 2rem;
+  height: 2rem;
   display: block;
-  border-radius: 20px;
 }
 
+/* (2) Divider  */
 .process-divider {
-  margin-top: 20px;
+  margin-top: auto; /* на одном уровне: прибиваем вниз */
+  padding-top: 1.25rem;
   border-bottom: 1px solid var(--brand-text);
+  /* max-width: 32.5625rem; 521px */
+  max-width: none;
+  width: 100%;
 }
 
-/* FIGMA: Центрированная кнопка CTA - 476x71px */
+/* CTA кнопка (как было у тебя) */
 .process .btn-primary-custom {
-  min-width: 476px;
+  /* min-width: 476px;
   min-height: 71px;
-  max-width: 100%;
+  max-width: 100%; */
+  min-width: auto; /* важно: НЕ 476px */
+  min-height: 70px; /* совпадает с твоим глобальным */
+  padding: 0 32px;
 }
 
-/* Boxed Card Style (white background) */
-.process-step-boxed {
-  background-color: #FFFFFF;
-  border-radius: 20px;
-  padding: 25px 30px;
-  height: 100%;
-}
-
-.process-step-boxed .process-divider {
-  display: none;
-}
-
-.process-step-boxed .process-icon {
-  display: none;
-}
-
-/* Horizontal 4-column Layout */
-.process-horizontal .process-step-boxed {
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 20px;
-  padding: 25px;
-  height: 100%;
-}
-
-.process-horizontal .process-step-header {
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.process-horizontal .process-icon {
-  display: none;
-}
-
-/* Responsive adjustments */
+/* (5) На уменьшении — всё по центру: заголовки, текст, divider */
 @media (max-width: 991px) {
-  .process {
-    text-align: center;    /*  центрируем весь текст секции */
+  .process-step,
+  .process-step h3,
+  .process-step p {
+    text-align: center;
   }
 
   .process-step-header {
-    align-items: center;    /* заголовок шага и иконка по центру */
-  }
-
-  .process-icon {
-    justify-content: center;    /* иконка шага по центру */
+    justify-content: center;
   }
 
   .process-divider {
-    margin-left: auto;     /* линия по центру */
-    margin-right: auto;    /* линия по центру */
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-
-@media (max-width: 768px) {
-  /* .process {
-    text-align: center;
-    /* ИЗМЕНЕНИЕ: центрируем весь текст секции на адаптиве */
-   */
-  /* Horizontal layout: icon and title in one row */
-  .process-step-header {
-    flex-direction: row;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .process-step {
-    padding: 0px 0;
-  }
-
-  
-
-  .process-icon img {
-    width: 60px !important;
-    height: 60px !important;
-  }
-
-  .process-icon .img-placeholder {
-    width: 60px !important;
-    height: 60px !important;
-  }
-
-  
-}
-
+/* Мелкие экраны — чуть меньше иконка + кнопка во всю ширину */
 @media (max-width: 576px) {
   .process-icon img {
-    width: 50px !important;
-    height: 50px !important;
-  }
-
-  .process-icon .img-placeholder {
-    width: 50px !important;
-    height: 50px !important;
+    width: 1.75rem;
+    height: 1.75rem;
   }
 
   .process .btn-primary-custom {
-    display: flex;
-    min-width: auto;
+    /* min-width: auto;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 1.25rem; */
+    padding: 0 24px; /* ещё компактнее на моб */
+    width: auto; /* НЕ растягиваем на 100% */
   }
 }

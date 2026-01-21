@@ -151,27 +151,35 @@
            ПРАВАЯ КОЛОНКА - Контент
            ════════════════════════════════════════════════════════════════════════ -->
           <div class="col-lg-7 col-md-12">
-            <div class="promotional-content" style="padding-left: 100px">
-              <!-- ЗАГОЛОВОК - изменить текст между тегами - в шаблоне-->
-              <h2 class="text-bold-big mb-4">
+            <!-- было style="padding-left: 100px" -->
+            <div class="promotional-content" style="padding-left: 0px">
+              <!-- ЗАГОЛОВОК -->
+              <!-- text-h2 или text-bold-big. был  text-bold-big-->
+              <h2 class="text-h2 mb-4">
                 Erinnerungen an eine besondere Zeit
                 <span style="color: #e2c08d">– einfühlsam & natürlich</span>
               </h2>
 
-              <!-- ОПИСАНИЕ - изменить текст (можно использовать <br> и <p>) -->
+              <!-- ОПИСАНИЕ  -->
               <div class="text-medium-small mb-4" style="max-width: 608px">
                 <span class="promotional-list-title"
                   >Für werdende Mamas &amp; frischgebackene Eltern</span
                 >
 
-                <ul class="promotional-bullets">
+                <!-- <ul class="promotional-bullets">
                   <li>
                     <strong>Persönliches Shooting im Studio in Hagen</strong>
                   </li>
                   <li>
                     <strong>Liebevolle Atmosphäre & natürliche Bilder</strong>
                   </li>
-                </ul>
+                </ul> -->
+                <div class="text-medium-small mb-4" style="max-width: 608px">
+                  <ul class="promotional-bullets text-bold-small">
+                    <li>Persönliches Shooting im Studio in Hagen</li>
+                    <li>Liebevolle Atmosphäre & natürliche Bilder</li>
+                  </ul>
+                </div>
               </div>
 
               <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ -->
@@ -207,7 +215,7 @@
            ════════════════════════════════════════════════════════════════════════ -->
           <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
             <div class="features-content">
-              <!-- ЗАГОЛОВОК - основной заголовок секции (если нет центрированного) -->
+              <!-- ЗАГОЛОВОК - основной заголовок секции -->
               <h2 class="text-bold-big mb-4">
                 Informationen zum Aufnahmeformat
               </h2>
@@ -217,11 +225,22 @@
               </p>
 
               <!-- СПИСОК - пункты с буллетами (опционально) -->
-              <div class="text-medium-small mb-4" style="max-width: 520px">
+              <!-- <div class="text-medium-small mb-4" style="max-width: 520px">
                 <strong class="features-list-title"
                   >Studio Eigenschaften:
                 </strong>
                 <ul class="features-bullets">
+                  <li>mehrere Hallen</li>
+                  <li>Kulissen</li>
+                  <li>Professionelle Ausstattung</li>
+                  <li>Schmink- und Umkleidebereich</li>
+                </ul>
+              </div> -->
+
+              <div class="text-medium-small mb-4" style="max-width: 520px">
+                <p class="text-bold-small mb-2">Studio Eigenschaften:</p>
+
+                <ul class="features-bullets mb-0">
                   <li>mehrere Hallen</li>
                   <li>Kulissen</li>
                   <li>Professionelle Ausstattung</li>
@@ -265,7 +284,8 @@
            ПРАВАЯ КОЛОНКА - Изображения
            ════════════════════════════════════════════════════════════════════════ -->
           <div class="col-lg-6 col-md-12">
-            <!-- ОДНО ИЗОБРАЖЕНИЕ В РАМКЕ - со слоганом внизу -->
+            <!-- ОДНО ИЗОБРАЖЕНИЕ В РАМКЕ - со слоганом внизу 
+             по шваблону падинги для div 75px 62px 78px 66px и width для img width: 365px-->
             <div
               class="features-frame"
               style="
@@ -592,173 +612,106 @@
     ║  PROCESS - Секция с шагами/этапами процесса                               ║
     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
 
-    <section class="process section-padding bg-brand-secondary">
+      <section class="process section-padding bg-brand-secondary">
       <div class="container">
-        <!-- ЗАГОЛОВОК СЕКЦИИ (когда нет отдельного фона для заголовка) -->
-        <!-- Заголовок (вертикальный layout) -->
+        <!-- Заголовок секции -->
         <div class="row mb-5 align-items-center">
-          <!-- Только заголовок, CTA будет внизу по центру -->
           <div class="col-12">
             <h2 class="text-h3">Wie genau komme ich zu einem Fotoshooting?</h2>
           </div>
         </div>
 
-        <!-- ══════════════════════════════════════════════════════════════════════════
-         КАРТОЧКИ ШАГОВ
-         Каждая карточка: номер/иконка, заголовок, описание
-         ══════════════════════════════════════════════════════════════════════════ -->
-        <div class="row">
-          <div class="col-md-6 mb-4">
+        <!-- Карточки (используем gap вместо mb-4) -->
+        <div class="row g-3 g-md-4">
+          <div class="col-md-6 d-flex">
             <div class="process-step">
-              <div class="process-step-header mb-3">
-                <!-- ИКОНКА ШАГА - изменить src="..." для замены -->
+              <div class="process-step-header">
                 <div class="process-icon">
-                  <img
-                    src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w&#x3D;76&amp;h&#x3D;75&amp;fit&#x3D;crop"
-                    alt="1. Eintragen"
-                    style="width: 76px; height: 75px"
-                  />
-                  <!-- <img
-                    src="assets/icons/icon-website.png"
-                    alt="Icon"
-                    width="48"
-                    height="48"
-                  /> -->
+                  <img src="assets/icons/check.svg" alt="1. Eintragen" />
                 </div>
-
-                <!-- ЗАГОЛОВОК ШАГА (например: "1. Eintragen") -->
                 <h3 class="text-bold-small mb-0">1. Eintragen</h3>
               </div>
 
-              <!-- ОПИСАНИЕ ШАГА -->
-              <p class="text-medium-small mb-4">
+              <p class="text-medium-small mb-3">
                 Mach das Quiz und beantworte die Fragen, damit wir genügend Zeit
                 für euch einplanen können. Trag dich ein und sichere dir deinen
                 unschlagbaren Gutschein! Wir melden uns so schnell wie möglich
                 bei dir.
               </p>
 
-              <div
-                class="process-divider"
-                style="max-width: 521px; border-bottom: 1px solid #3d3d3d"
-              ></div>
+              <div class="process-divider"></div>
             </div>
           </div>
-          <div class="col-md-6 mb-4">
-            <div class="process-step">
-              <div class="process-step-header mb-3">
-                <!-- ИКОНКА ШАГА - изменить src="..." для замены -->
-                <div class="process-icon">
-                  <img
-                    src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w&#x3D;76&amp;h&#x3D;75&amp;fit&#x3D;crop"
-                    alt="2. Shootingzeit"
-                    style="width: 76px; height: 75px"
-                  />
-                  <!-- <img
-                    src="assets/icons/icon-website.png"
-                    alt="Icon"
-                    width="48"
-                    height="48"
-                  /> -->
-                </div>
 
-                <!-- ЗАГОЛОВОК ШАГА (например: "1. Eintragen") -->
+          <div class="col-md-6 d-flex">
+            <div class="process-step">
+              <div class="process-step-header">
+                <div class="process-icon">
+                  <img src="assets/icons/check.svg" alt="2. Shootingzeit" />
+                </div>
                 <h3 class="text-bold-small mb-0">2. Shootingzeit</h3>
               </div>
 
-              <!-- ОПИСАНИЕ ШАГА -->
-              <p class="text-medium-small mb-4">
+              <p class="text-medium-small mb-3">
                 Während des Fotoshootings entstehen vielfältige und einzigartige
                 Aufnahmen, damit ihr eine große Auswahl an Bildern habt und eure
                 persönlichen Favoriten wählen könnt.
               </p>
 
-              <div
-                class="process-divider"
-                style="max-width: 521px; border-bottom: 1px solid #3d3d3d"
-              ></div>
+              <div class="process-divider"></div>
             </div>
           </div>
-          <div class="col-md-6 mb-4">
+
+          <div class="col-md-6 d-flex">
             <div class="process-step">
-              <div class="process-step-header mb-3">
-                <!-- ИКОНКА ШАГА - изменить src="..." для замены -->
+              <div class="process-step-header">
                 <div class="process-icon">
                   <img
-                    src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w&#x3D;76&amp;h&#x3D;75&amp;fit&#x3D;crop"
+                    src="assets/icons/check.svg"
                     alt="3. Wähle dein Lieblingsbild/er aus"
-                    style="width: 76px; height: 75px"
                   />
-                  <!-- <img
-                    src="assets/icons/icon-website.png"
-                    alt="Icon"
-                    width="48"
-                    height="48"
-                  /> -->
                 </div>
-
-                <!-- ЗАГОЛОВОК ШАГА (например: "1. Eintragen") -->
                 <h3 class="text-bold-small mb-0">
                   3. Wähle dein Lieblingsbild/er aus
                 </h3>
               </div>
 
-              <!-- ОПИСАНИЕ ШАГА -->
-              <p class="text-medium-small mb-4">
+              <p class="text-medium-small mb-3">
                 Nach dem Fotoshooting könnt ihr in Ruhe eure Lieblingsbilder
                 auswählen und entscheiden, welche ihr erwerben möchtet – ganz
                 ohne Kaufzwang.
               </p>
 
-              <div
-                class="process-divider"
-                style="max-width: 521px; border-bottom: 1px solid #3d3d3d"
-              ></div>
+              <div class="process-divider"></div>
             </div>
           </div>
-          <div class="col-md-6 mb-4">
-            <div class="process-step">
-              <div class="process-step-header mb-3">
-                <!-- ИКОНКА ШАГА - изменить src="..." для замены -->
-                <div class="process-icon">
-                  <img
-                    src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w&#x3D;76&amp;h&#x3D;75&amp;fit&#x3D;crop"
-                    alt="4. Ergebnis"
-                    style="width: 76px; height: 75px"
-                  />
-                  <!-- <img
-                    src="assets/icons/icon-website.png"
-                    alt="Icon"
-                    width="48"
-                    height="48"
-                  /> -->
-                </div>
 
-                <!-- ЗАГОЛОВОК ШАГА (например: "1. Eintragen") -->
+          <div class="col-md-6 d-flex">
+            <div class="process-step">
+              <div class="process-step-header">
+                <div class="process-icon">
+                  <img src="assets/icons/check.svg" alt="4. Ergebnis" />
+                </div>
                 <h3 class="text-bold-small mb-0">4. Ergebnis</h3>
               </div>
 
-              <!-- ОПИСАНИЕ ШАГА -->
-              <p class="text-medium-small mb-4">
+              <p class="text-medium-small mb-3">
                 Unvergängliche Erinnerungen in digitaler Form – jederzeit
                 abrufbar, zum Teilen mit euren Liebsten oder für den besonderen
                 Moment zum Wiedererleben.
               </p>
 
-              <div
-                class="process-divider"
-                style="max-width: 521px; border-bottom: 1px solid #3d3d3d"
-              ></div>
+              <div class="process-divider"></div>
             </div>
           </div>
         </div>
 
-        <!-- КНОПКА CTA - по центру (для horizontal layout или ctaCentered) -->
+        <!-- CTA -->
         <div class="row mt-4">
           <div class="col-12 text-center">
-            <a href="quiz-1.html" class="btn btn-primary-custom">
-              Frage stellen
-            </a>
+            <a href="quiz-1.html" class="btn btn-primary-custom"
+              >Frage stellen</a
+            >
           </div>
         </div>
       </div>
@@ -780,7 +733,6 @@
             src="assets/images/newborn/foto5.jpg"
             alt="Babybauchshooting"
             class="fullwidth-image__img"
-            style=""
           />
         </div>
       </div>
@@ -946,7 +898,7 @@
               <div class="service-image mb-3">
                 <img
                   src="assets/images/babybauch/foto8.jpg"
-                  alt="Family Time"
+                  alt="Babybauchshooting"
                   class="img-fluid"
                 />
               </div>
@@ -966,7 +918,7 @@
               <div class="service-image mb-3">
                 <img
                   src="assets/images/babybauch/foto11.jpg"
-                  alt="Kinder-Fotoshooting"
+                  alt="Babybauchshooting"
                   class="img-fluid"
                 />
               </div>
@@ -986,7 +938,7 @@
               <div class="service-image mb-3">
                 <img
                   src="assets/images/babybauch/foto1.jpg"
-                  alt="Babybauch &amp; Newborn"
+                  alt="Babybauchshooting"
                   class="img-fluid"
                 />
               </div>
@@ -1006,7 +958,7 @@
               <div class="service-image mb-3">
                 <img
                   src="assets/images/babybauch/foto7.jpeg"
-                  alt="Und vieles mehr!"
+                  alt="Babybauchshooting"
                   class="img-fluid"
                 />
               </div>

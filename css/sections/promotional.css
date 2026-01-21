@@ -7,11 +7,14 @@
 .promotional-image {
   width: 100%;
   max-width: 428px;
+  /* по макету */
+  /* width: 372px; */
+  /* height: 523px; */
 }
 
 .promotional-image img,
 .promotional-image .img-placeholder {
-  border-radius: 40px;
+  border-radius: 10px;
 }
 
 .promotional-content {

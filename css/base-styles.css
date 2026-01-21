@@ -28,15 +28,18 @@
   --font-h2: 45px;
   --font-h3: 35px;
   --font-h4: 28px;
-  --font-body: 22px;
-   /* --font-body: 16px; */
+  /* --font-body: 22px; */
+  --font-body: 16px;
   --font-weight-medium: 500;
   /* --font-weight-medium: 200; */
   --font-weight-bold: 700;
+  /* --font-weight-bold: 500; */
 
   /* Line heights */
-  --line-height-tight: 100%;
-  --line-height-normal: normal;
+  --line-height-tight: 1.1; /* вместо 100% */
+  /* --line-height-tight: 100%; */
+  /* --line-height-normal: normal; */
+  --line-height-normal: 1.5;
 
   /* Spacing */
   --spacing-section: 80px;

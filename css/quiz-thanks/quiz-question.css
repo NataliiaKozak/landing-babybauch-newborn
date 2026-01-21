@@ -5,7 +5,6 @@
 .quiz-question {
   padding: 20px 0 100px 0;
   min-height: calc(100vh - 250px);
- 
 }
 
 /* Title добавлено margin-top: 20px; изменено margin-bottom*/
@@ -38,8 +37,6 @@
   justify-content: space-between;
 }
 
-
-
 /* Карточка (картинка + кнопка) - без gap, кнопка прилегает к картинке */
 .quiz-question__card {
   display: flex;
@@ -65,14 +62,14 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 30px 30px 0 0;
+  border-radius: 10px 10px 0 0;
 }
 
 .quiz-question__image-placeholder {
   width: 100%;
   height: 100%;
-  background-color: #7F7F7F;
-  border-radius: 30px 30px 0 0;
+  background-color: #7f7f7f;
+  border-radius: 10px 10px 0 0;
 }
 
 /* Option button - only bottom corners rounded (Figma: rounded-bl-[30px] rounded-br-[30px]) */
@@ -83,14 +80,18 @@
   width: 100%;
   height: 66px;
   padding: 0 20px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: none;
-  border-radius: 0 0 30px 30px;
+  border-radius: 0 0 10px 10px;
   text-decoration: none;
-  color: #000000;
+  /* color: #000000;
   font-size: 22px;
   font-weight: 500;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif; */
+  font-size: var(--font-body);
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-family);
+  color: var(--color-black);
   transition: all 0.3s ease;
   cursor: pointer;
   box-sizing: border-box;
@@ -98,24 +99,34 @@
 
 .quiz-question__option:hover {
   background-color: rgba(226, 192, 141, 0.2);
-  border-color: #E2C08D;
+  border-color: #e2c08d;
   transform: translateY(-2px);
 }
 
 .quiz-question__option:active,
 .quiz-question__option.selected {
-  background-color: #E2C08D;
-  border-color: #E2C08D;
+  background-color: #e2c08d;
+  border-color: #e2c08d;
   color: #ffffff;
 }
 
+/* .quiz-question__option-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} */
+
 .quiz-question__option-text {
+  flex: 1;
+  min-width: 0;
+  display: block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 /* Multiline option (for longer text) */
+/* quiz-question__option--multiline - для многострочного текста в кнопке 
+- в связи изменением  --font-body: 16px;надо было удалить в некоторых квизах: 2, 3, 4, 8, 9, 10 */
 .quiz-question__option--multiline {
   height: 92px;
   white-space: normal;

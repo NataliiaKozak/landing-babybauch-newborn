@@ -10,42 +10,42 @@
 
 .text-h2 {
   font-weight: var(--font-weight-bold);
-  font-size: var(--font-h2);
+  font-size: var(--font-h2); /* 45px */
   line-height: var(--line-height-tight);
   color: var(--brand-text);
 }
 
 .text-h3 {
   font-weight: var(--font-weight-bold);
-    font-size: var(--font-h3);
+  font-size: var(--font-h3); /* 35px */
   line-height: var(--line-height-normal);
   color: var(--color-black);
 }
 
 .text-bold-big {
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-h4);
+  font-weight: var(--font-weight-bold); /* жирный */
+  font-size: var(--font-h4); /* 28px */
   line-height: var(--line-height-normal);
   color: var(--color-black);
 }
 
 .text-medium-big {
   font-weight: var(--font-weight-medium);
-  font-size: var(--font-h4);
+  font-size: var(--font-h4); /* 28px */
   line-height: var(--line-height-normal);
   color: var(--color-black);
 }
 
 .text-bold-small {
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-body);
+  font-weight: var(--font-weight-bold); /* жирный */
+  font-size: var(--font-body); /* 22px -> 16px */
   line-height: var(--line-height-normal);
   color: var(--color-black);
 }
 
 .text-medium-small {
   font-weight: var(--font-weight-medium);
-  font-size: var(--font-body);
+  font-size: var(--font-body); /* 22px -> 16px */
   line-height: var(--line-height-normal);
   color: var(--color-black);
 }
@@ -63,8 +63,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 30px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .btn-primary-custom:hover {
@@ -85,8 +87,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 30px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  border-radius: 10px;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .btn-outline-custom:hover {
@@ -153,10 +157,10 @@
     font-size: 22px;
   }
 
-  .text-bold-small,
+  /* .text-bold-small,
   .text-medium-small {
     font-size: 18px;
-  }
+  } */
 
   /* Buttons responsive */
   .btn-primary-custom,
@@ -184,10 +188,10 @@
     font-size: 18px;
   }
 
-  .text-bold-small,
+  /* .text-bold-small,
   .text-medium-small {
     font-size: 16px;
-  }
+  } */
 
   .btn-primary-custom,
   .btn-outline-custom {
