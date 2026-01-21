@@ -13,7 +13,13 @@
   margin-right: auto;
 }
 
-/* Swiper container */
+/* WRAP: место под стрелки по краям контейнера */
+.services-swiper-wrap {
+  position: relative;
+  padding: 0 60px; /* поля под стрелки */
+}
+
+/* Swiper container (без бокового padding!) */
 .services-swiper {
   width: 100%;
   position: relative;
@@ -42,7 +48,7 @@
   object-fit: cover;
   object-position: top center;
   display: block;
-  border-radius: 0; /* радиус уже на контейнере */
+  border-radius: 0;
 }
 
 /* Pagination (dots) */
@@ -55,7 +61,9 @@
   height: 10px;
   background: var(--brand-text, #3d3d3d);
   opacity: 0.3;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .services-swiper .swiper-pagination-bullet-active {
@@ -64,9 +72,9 @@
   transform: scale(1.2);
 }
 
-/* Arrows */
-.services-swiper .services-button-prev,
-.services-swiper .services-button-next {
+/* Arrows — по краям WRAP, не на фото */
+.services-swiper-wrap .services-button-prev,
+.services-swiper-wrap .services-button-next {
   width: 30px !important;
   height: 30px !important;
 
@@ -83,45 +91,48 @@
   justify-content: center;
 }
 
-.services-swiper .services-button-prev {
-  left: 15px;
+.services-swiper-wrap .services-button-prev {
+  left: 0; /*  край контейнера */
 }
 
-.services-swiper .services-button-next {
-  right: 15px;
+.services-swiper-wrap .services-button-next {
+  right: 0; /*  край контейнера */
 }
 
-.services-swiper .services-button-prev:hover,
-.services-swiper .services-button-next:hover {
+.services-swiper-wrap .services-button-prev:hover,
+.services-swiper-wrap .services-button-next:hover {
   color: #e2c08d;
 }
 
-/* Override Swiper default arrow icons */
-.services-swiper .services-button-prev::after,
-.services-swiper .services-button-next::after {
-  font-family: "Inter", Arial, sans-serif;
+.services-swiper-wrap .services-button-prev::after,
+.services-swiper-wrap .services-button-next::after {
+  font-family: 'Inter', Arial, sans-serif;
   font-size: 28px;
   font-weight: 300;
   line-height: 1;
 }
 
-.services-swiper .services-button-prev::after {
-  content: "←";
+.services-swiper-wrap .services-button-prev::after {
+  content: '←';
 }
 
-.services-swiper .services-button-next::after {
-  content: "→";
+.services-swiper-wrap .services-button-next::after {
+  content: '→';
 }
 
 /* Responsive */
 @media (max-width: 991px) {
+  .services-swiper-wrap {
+    padding: 0; /* убрали поля */
+  }
+
   .services-swiper {
     padding: 0 0 50px 0;
   }
 
-  .services-swiper .services-button-prev,
-  .services-swiper .services-button-next {
-    display: none;
+  .services-swiper-wrap .services-button-prev,
+  .services-swiper-wrap .services-button-next {
+    display: none; /* как у тебя было */
   }
 }
 

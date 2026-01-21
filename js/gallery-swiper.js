@@ -1,4 +1,3 @@
-// Normal режим: 1 слайд (моб), 2 (планшет), 3 (десктоп) + стрелки + точки. без проверки на gallery--single
 (function () {
   function initGallerySwiper() {
     var gallerySection = document.querySelector('.gallery');
@@ -14,12 +13,12 @@
       spaceBetween: 15,
       loop: true,
       pagination: {
-        el: '.swiper-pagination',
+        el: gallerySection.querySelector('.swiper-pagination'),
         clickable: true,
       },
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: gallerySection.querySelector('.swiper-button-next'),
+        prevEl: gallerySection.querySelector('.swiper-button-prev'),
       },
       grabCursor: true,
       breakpoints: {
@@ -54,12 +53,12 @@
       spaceBetween: 15,
       loop: true,
       pagination: {
-        el: '.services-pagination',
+        el: section.querySelector('.services-pagination'),
         clickable: true,
       },
       navigation: {
-        nextEl: '.services-button-next',
-        prevEl: '.services-button-prev',
+        nextEl: section.querySelector('.services-button-next'),
+        prevEl: section.querySelector('.services-button-prev'),
       },
       grabCursor: true,
       breakpoints: {

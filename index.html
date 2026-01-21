@@ -315,86 +315,82 @@
          SWIPER ГАЛЕРЕЯ
          imageHeight: высота изображений в пикселях (по умолчанию 350)
          ══════════════════════════════════════════════════════════════════════════ -->
-        <div class="swiper gallery-swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="gallery-item">
-                <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
-                <img
-                  src="assets/images/babybauch/foto13.jpg"
-                  alt="Babybauchshooting"
-                  class="img-fluid"
-                  loading="lazy"
-                  style=""
-                />
+        <!-- Swiper WRAP: поля под стрелки -->
+        <div class="gallery-swiper-wrap">
+          <div class="swiper gallery-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="gallery-item">
+                  <img
+                    src="assets/images/babybauch/foto13.jpg"
+                    alt="Babybauchshooting"
+                    class="img-fluid"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="gallery-item">
+                  <img
+                    src="assets/images/babybauch/foto5.jpg"
+                    alt="Babybauchshooting"
+                    class="img-fluid"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="gallery-item">
+                  <img
+                    src="assets/images/newborn/foto1.jpg"
+                    alt="Neugeborenenshooting"
+                    class="img-fluid"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="gallery-item">
+                  <img
+                    src="assets/images/babybauch/foto7.jpeg"
+                    alt="Babybauchshooting"
+                    class="img-fluid"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="gallery-item">
+                  <img
+                    src="assets/images/newborn/foto6.jpg"
+                    alt="Neugeborenenshooting"
+                    class="img-fluid"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="gallery-item">
+                  <img
+                    src="assets/images/newborn/foto4.jpg"
+                    alt="Neugeborenenshooting"
+                    class="img-fluid"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="gallery-item">
-                <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
-                <img
-                  src="assets/images/babybauch/foto5.jpg"
-                  alt="Babybauchshooting"
-                  class="img-fluid"
-                  loading="lazy"
-                  style=""
-                />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="gallery-item">
-                <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
-                <img
-                  src="assets/images/newborn/foto1.jpg"
-                  alt="Neugeborenenshooting"
-                  class="img-fluid"
-                  loading="lazy"
-                  style=""
-                />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="gallery-item">
-                <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
-                <img
-                  src="assets/images/babybauch/foto7.jpeg"
-                  alt="Babybauchshooting"
-                  class="img-fluid"
-                  loading="lazy"
-                  style=""
-                />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="gallery-item">
-                <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
-                <img
-                  src="assets/images/newborn/foto6.jpg"
-                  alt="Neugeborenenshooting"
-                  class="img-fluid"
-                  loading="lazy"
-                  style=""
-                />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="gallery-item">
-                <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
-                <img
-                  src="assets/images/newborn/foto4.jpg"
-                  alt="Neugeborenenshooting"
-                  class="img-fluid"
-                  loading="lazy"
-                  style=""
-                />
-              </div>
-            </div>
+
+            <!-- точки -->
+            <div class="swiper-pagination"></div>
           </div>
 
-          <!-- Пагинация (точки) - скрыта в режиме singleImage -->
-          <div class="swiper-pagination"></div>
-
-          <!-- Стрелки навигации -->
+          <!-- стрелки ВНЕ swiper (в полях) -->
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
         </div>
@@ -813,73 +809,76 @@
         </div>
 
         <!-- Swiper -->
-        <div class="swiper services-swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="service-card">
-                <div class="service-image mb-3">
-                  <img
-                    src="assets/images/babybauch/foto8.jpg"
-                    alt="Babybauchshooting"
-                    class="img-fluid"
-                    loading="lazy"
-                  />
+        <!-- Swiper WRAP: поля под стрелки -->
+        <div class="services-swiper-wrap">
+          <div class="swiper services-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="service-card">
+                  <div class="service-image mb-3">
+                    <img
+                      src="assets/images/babybauch/foto8.jpg"
+                      alt="Babybauchshooting"
+                      class="img-fluid"
+                      loading="lazy"
+                    />
+                  </div>
+                  <h3 class="text-bold-small mb-2">Name</h3>
+                  <p class="text-medium-small mb-0">Rückmeldung</p>
                 </div>
-                <h3 class="text-bold-small mb-2">Name</h3>
-                <p class="text-medium-small mb-0">Rückmeldung</p>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="service-card">
+                  <div class="service-image mb-3">
+                    <img
+                      src="assets/images/babybauch/foto11.jpg"
+                      alt="Babybauchshooting"
+                      class="img-fluid"
+                      loading="lazy"
+                    />
+                  </div>
+                  <h3 class="text-bold-small mb-2">Name</h3>
+                  <p class="text-medium-small mb-0">Rückmeldung</p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="service-card">
+                  <div class="service-image mb-3">
+                    <img
+                      src="assets/images/babybauch/foto1.jpg"
+                      alt="Babybauchshooting"
+                      class="img-fluid"
+                      loading="lazy"
+                    />
+                  </div>
+                  <h3 class="text-bold-small mb-2">Name</h3>
+                  <p class="text-medium-small mb-0">Rückmeldung</p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="service-card">
+                  <div class="service-image mb-3">
+                    <img
+                      src="assets/images/babybauch/foto7.jpeg"
+                      alt="Babybauchshooting"
+                      class="img-fluid"
+                      loading="lazy"
+                    />
+                  </div>
+                  <h3 class="text-bold-small mb-2">Name</h3>
+                  <p class="text-medium-small mb-0">Rückmeldung</p>
+                </div>
               </div>
             </div>
 
-            <div class="swiper-slide">
-              <div class="service-card">
-                <div class="service-image mb-3">
-                  <img
-                    src="assets/images/babybauch/foto11.jpg"
-                    alt="Babybauchshooting"
-                    class="img-fluid"
-                    loading="lazy"
-                  />
-                </div>
-                <h3 class="text-bold-small mb-2">Name</h3>
-                <p class="text-medium-small mb-0">Rückmeldung</p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="service-card">
-                <div class="service-image mb-3">
-                  <img
-                    src="assets/images/babybauch/foto1.jpg"
-                    alt="Babybauchshooting"
-                    class="img-fluid"
-                    loading="lazy"
-                  />
-                </div>
-                <h3 class="text-bold-small mb-2">Name</h3>
-                <p class="text-medium-small mb-0">Rückmeldung</p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="service-card">
-                <div class="service-image mb-3">
-                  <img
-                    src="assets/images/babybauch/foto7.jpeg"
-                    alt="Babybauchshooting"
-                    class="img-fluid"
-                    loading="lazy"
-                  />
-                </div>
-                <h3 class="text-bold-small mb-2">Name</h3>
-                <p class="text-medium-small mb-0">Rückmeldung</p>
-              </div>
-            </div>
+            <!-- точки -->
+            <div class="swiper-pagination services-pagination"></div>
           </div>
 
-          <!-- точки -->
-          <div class="swiper-pagination services-pagination"></div>
-
-          <!-- стрелки -->
+          <!-- стрелки ВНЕ swiper (в полях) -->
           <div class="swiper-button-prev services-button-prev"></div>
           <div class="swiper-button-next services-button-next"></div>
         </div>
