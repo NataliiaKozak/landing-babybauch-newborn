@@ -40,6 +40,11 @@
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
 
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <!-- Custom CSS -->
     <link href="css/base-styles.css" rel="stylesheet" />
     <link href="css/common.css" rel="stylesheet" />
@@ -62,12 +67,6 @@
     <link href="css/quiz-thanks/thank-you-hero.css" rel="stylesheet" />
     <link href="css/quiz-thanks/quiz-header.css" rel="stylesheet" />
     <link href="css/sections/author-footer.css" rel="stylesheet" />
-
-    <!-- Swiper CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
   </head>
 
   <body>
@@ -403,15 +402,13 @@
     </section>
 
     <!-- SECTION 5
-     ╔═══════════════════════════════════════════════════════════════════════════╗
-     ║  BENEFITS - Секция с преимуществами (карточки с иконками)                 ║
-     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+╔═══════════════════════════════════════════════════════════════════════════╗
+║  BENEFITS - Секция с преимуществами (карточки с иконками)                 ║
+╚═══════════════════════════════════════════════════════════════════════════╝ -->
     <section class="benefits section-padding bg-brand-primary">
       <div class="container">
-        <!-- ══════════════════════════════════════════════════════════════════════════
-         ЗАГОЛОВОК СЕКЦИИ - центрированный
-         ══════════════════════════════════════════════════════════════════════════ -->
-        <div class="row mb-5">
+        <!-- Заголовок секции -->
+        <div class="row mb-4 mb-lg-5">
           <div class="col-12 text-center">
             <h2 class="text-h2">
               Warum du dich für uns
@@ -420,155 +417,123 @@
           </div>
         </div>
 
-        <!-- ══════════════════════════════════════════════════════════════════════════
-         КАРТОЧКИ ПРЕИМУЩЕСТВ
-         Каждая карточка содержит: иконку, заголовок, описание
-         ══════════════════════════════════════════════════════════════════════════ -->
-        <div class="row">
-          <div class="col-lg-3 col-md-6 mb-4">
+        <!-- Карточки (gap вместо лишних mb-4) -->
+        <div class="row g-3 g-md-4">
+          <div class="col-lg-3 col-md-6">
             <div class="benefit-card">
-              <!-- ИКОНКА/ИЗОБРАЖЕНИЕ - изменить src="..." для замены -->
-              <div class="benefit-icon">
-                <img
-                  src="assets/icons/icon-website.png"
-                  alt="Icon"
-                  width="48"
-                  height="48"
-                />
-              </div>
-
-              <div class="benefit-text">
-                <!-- ЗАГОЛОВОК КАРТОЧКИ -->
-                <h3 class="text-bold-small mb-3">
+              <div class="benefit-head">
+                <div class="benefit-icon">
+                  <img
+                    src="assets/icons/circle-check.svg"
+                    alt="Icon"
+                    width="48"
+                    height="48"
+                  />
+                </div>
+                <h3 class="text-bold-small mb-0">
                   Erfahrung und Professionalität
                 </h3>
-
-                <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ - удалить этот блок если не нужна -->
-                <div
-                  class="benefit-divider mb-3"
-                  style="max-width: 158px; border-bottom: 1px solid #3d3d3d"
-                ></div>
-
-                <!-- ОПИСАНИЕ КАРТОЧКИ -->
-                <p class="text-medium-small mb-0">
-                  Als erfahrene Fotografen und Eltern wissen wir, wie wichtig
-                  einfühlsame und sichere Shootings sind. Mit Geduld und einem
-                  geschulten Blick für Details halten wir die Schönheit deiner
-                  Schwangerschaft und die ersten Momente deines Babys in
-                  einzigartigen Bildern fest. Vertraue auf unsere Erfahrung, um
-                  Erinnerungen zu schaffen, die ein Leben lang bleiben.
-                </p>
               </div>
+
+              <div class="benefit-divider"></div>
+
+              <p class="text-medium-small mb-0">
+                Als erfahrene Fotografen und Eltern wissen wir, wie wichtig
+                einfühlsame und sichere Shootings sind. Mit Geduld und einem
+                geschulten Blick für Details halten wir die Schönheit deiner
+                Schwangerschaft und die ersten Momente deines Babys in
+                einzigartigen Bildern fest. Vertraue auf unsere Erfahrung, um
+                Erinnerungen zu schaffen, die ein Leben lang bleiben.
+              </p>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 mb-4">
-            <div class="benefit-card">
-              <!-- ИКОНКА/ИЗОБРАЖЕНИЕ - изменить src="..." для замены -->
-              <div class="benefit-icon">
-                <img
-                  src="assets/icons/icon-website.png"
-                  alt="Icon"
-                  width="48"
-                  height="48"
-                />
-              </div>
 
-              <div class="benefit-text">
-                <!-- ЗАГОЛОВОК КАРТОЧКИ -->
-                <h3 class="text-bold-small mb-3">
+          <div class="col-lg-3 col-md-6">
+            <div class="benefit-card">
+              <div class="benefit-head">
+                <div class="benefit-icon">
+                  <img
+                    src="assets/icons/circle-check.svg"
+                    alt="Icon"
+                    width="48"
+                    height="48"
+                  />
+                </div>
+                <h3 class="text-bold-small mb-0">
                   Gemütliches Studio und Stressfreies Shooting
                 </h3>
-
-                <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ - удалить этот блок если не нужна -->
-                <div
-                  class="benefit-divider mb-3"
-                  style="max-width: 158px; border-bottom: 1px solid #3d3d3d"
-                ></div>
-
-                <!-- ОПИСАНИЕ КАРТОЧКИ -->
-                <p class="text-medium-small mb-0">
-                  In unserem speziell eingerichteten Studio herrscht eine warme
-                  und entspannte Atmosphäre. Mit professionellem Equipment und
-                  einer liebevoll zusammengestellten Auswahl an Outfits sorgen
-                  wir dafür, dass das Shooting für dich und dein Baby stressfrei
-                  und angenehm verläuft. Gemeinsam schaffen wir unvergessliche
-                  Erinnerungen.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-4">
-            <div class="benefit-card">
-              <!-- ИКОНКА/ИЗОБРАЖЕНИЕ - изменить src="..." для замены -->
-              <div class="benefit-icon">
-                <img
-                  src="assets/icons/icon-website.png"
-                  alt="Icon"
-                  width="48"
-                  height="48"
-                />
               </div>
 
-              <div class="benefit-text">
-                <!-- ЗАГОЛОВОК КАРТОЧКИ -->
-                <h3 class="text-bold-small mb-3">Liebevolle Nachbearbeitung</h3>
+              <div class="benefit-divider"></div>
 
-                <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ - удалить этот блок если не нужна -->
-                <div
-                  class="benefit-divider mb-3"
-                  style="max-width: 158px; border-bottom: 1px solid #3d3d3d"
-                ></div>
-
-                <!-- ОПИСАНИЕ КАРТОЧКИ -->
-                <p class="text-medium-small mb-0">
-                  Nach dem Shooting bearbeiten wir die ausgewählten Bilder mit
-                  viel Sorgfalt und Liebe zum Detail. Dabei achten wir darauf,
-                  die Natürlichkeit und Schönheit jeder Aufnahme zu bewahren. So
-                  entstehen zeitlose Erinnerungen, die du immer wieder gerne
-                  ansehen wirst.
-                </p>
-              </div>
+              <p class="text-medium-small mb-0">
+                In unserem speziell eingerichteten Studio herrscht eine warme
+                und entspannte Atmosphäre. Mit professionellem Equipment und
+                einer liebevoll zusammengestellten Auswahl an Outfits sorgen wir
+                dafür, dass das Shooting für dich und dein Baby stressfrei und
+                angenehm verläuft. Gemeinsam schaffen wir unvergessliche
+                Erinnerungen.
+              </p>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 mb-4">
+          <div class="col-lg-3 col-md-6">
             <div class="benefit-card">
-              <!-- ИКОНКА/ИЗОБРАЖЕНИЕ - изменить src="..." для замены -->
-              <div class="benefit-icon">
-                <img
-                  src="assets/icons/icon-website.png"
-                  alt="Icon"
-                  width="48"
-                  height="48"
-                />
+              <div class="benefit-head">
+                <div class="benefit-icon">
+                  <img
+                    src="assets/icons/circle-check.svg"
+                    alt="Icon"
+                    width="48"
+                    height="48"
+                  />
+                </div>
+                <h3 class="text-bold-small mb-0">Liebevolle Nachbearbeitung</h3>
               </div>
 
-              <div class="benefit-text">
-                <!-- ЗАГОЛОВОК КАРТОЧКИ -->
-                <h3 class="text-bold-small mb-3">
+              <div class="benefit-divider"></div>
+
+              <p class="text-medium-small mb-0">
+                Nach dem Shooting bearbeiten wir die ausgewählten Bilder mit
+                viel Sorgfalt und Liebe zum Detail. Dabei achten wir darauf, die
+                Natürlichkeit und Schönheit jeder Aufnahme zu bewahren. So
+                entstehen zeitlose Erinnerungen, die du immer wieder gerne
+                ansehen wirst.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="benefit-card">
+              <div class="benefit-head">
+                <div class="benefit-icon">
+                  <img
+                    src="assets/icons/circle-check.svg"
+                    alt="Icon"
+                    width="48"
+                    height="48"
+                  />
+                </div>
+                <h3 class="text-bold-small mb-0">
                   Besondere Erinnerungsstücke
                 </h3>
-
-                <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ - удалить этот блок если не нужна -->
-                <div
-                  class="benefit-divider mb-3"
-                  style="max-width: 158px; border-bottom: 1px solid #3d3d3d"
-                ></div>
-
-                <!-- ОПИСАНИЕ КАРТОЧКИ -->
-                <p class="text-medium-small mb-0">
-                  Nach dem Shooting werden deine ausgewählten Bilder mit größter
-                  Sorgfalt und viel Liebe zum Detail bearbeitet. Dabei steht die
-                  natürliche Ausstrahlung und Schönheit jeder Aufnahme im
-                  Mittelpunkt. So entstehen zeitlose Erinnerungen, die immer
-                  wieder dein Herz berühren.
-                </p>
               </div>
+
+              <div class="benefit-divider"></div>
+
+              <p class="text-medium-small mb-0">
+                Nach dem Shooting werden deine ausgewählten Bilder mit größter
+                Sorgfalt und viel Liebe zum Detail bearbeitet. Dabei steht die
+                natürliche Ausstrahlung und Schönheit jeder Aufnahme im
+                Mittelpunkt. So entstehen zeitlose Erinnerungen, die immer
+                wieder dein Herz berühren.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <!-- SECTION 6
     ╔═══════════════════════════════════════════════════════════════════════════╗
     ║  PROCESS - Секция с шагами/этапами процесса                               ║
@@ -833,126 +798,98 @@
     </section>
 
     <!-- SECTION 9
-     ╔═══════════════════════════════════════════════════════════════════════════╗
-     ║  SERVICES - Секция с отзывами (карточки с изображениями)                  ║
-     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+╔═══════════════════════════════════════════════════════════════════════════╗
+║  SERVICES - Секция с отзывами (Swiper.js слайдер)                          ║
+╚═══════════════════════════════════════════════════════════════════════════╝ -->
     <section class="services section-padding bg-brand-secondary">
       <div class="container">
-        <!-- ══════════════════════════════════════════════════════════════════════════
-         ЗАГОЛОВОК СЕКЦИИ
-         ══════════════════════════════════════════════════════════════════════════ -->
+        <!-- Заголовок -->
         <div class="row mb-5">
           <div class="col-12">
-            <h2 class="text-h3 text-center" style="max-width: 883px">
+            <h2 class="text-h3 text-center services-title">
               Rückmeldung der Eltern
             </h2>
           </div>
         </div>
 
-        <!-- ══════════════════════════════════════════════════════════════════════════
-         КАРТОЧКИ УСЛУГ
-         Каждая карточка: изображение, заголовок, описание
-         ══════════════════════════════════════════════════════════════════════════ -->
-        <div class="row">
-          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-            <div class="service-card">
-              <!-- ИЗОБРАЖЕНИЕ УСЛУГИ - изменить src="..." для замены -->
-              <div class="service-image mb-3">
-                <img
-                  src="assets/images/babybauch/foto8.jpg"
-                  alt="Babybauchshooting"
-                  class="img-fluid"
-                />
+        <!-- Swiper -->
+        <div class="swiper services-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="service-card">
+                <div class="service-image mb-3">
+                  <img
+                    src="assets/images/babybauch/foto8.jpg"
+                    alt="Babybauchshooting"
+                    class="img-fluid"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 class="text-bold-small mb-2">Name</h3>
+                <p class="text-medium-small mb-0">Rückmeldung</p>
               </div>
+            </div>
 
-              <!-- НАЗВАНИЕ УСЛУГИ -->
-              <h3 class="text-bold-small mb-3">Name</h3>
+            <div class="swiper-slide">
+              <div class="service-card">
+                <div class="service-image mb-3">
+                  <img
+                    src="assets/images/babybauch/foto11.jpg"
+                    alt="Babybauchshooting"
+                    class="img-fluid"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 class="text-bold-small mb-2">Name</h3>
+                <p class="text-medium-small mb-0">Rückmeldung</p>
+              </div>
+            </div>
 
-              <!-- ОПИСАНИЕ УСЛУГИ -->
-              <p class="text-medium-small mb-0" style="max-width: 283px">
-                Rückmeldung
-              </p>
+            <div class="swiper-slide">
+              <div class="service-card">
+                <div class="service-image mb-3">
+                  <img
+                    src="assets/images/babybauch/foto1.jpg"
+                    alt="Babybauchshooting"
+                    class="img-fluid"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 class="text-bold-small mb-2">Name</h3>
+                <p class="text-medium-small mb-0">Rückmeldung</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="service-card">
+                <div class="service-image mb-3">
+                  <img
+                    src="assets/images/babybauch/foto7.jpeg"
+                    alt="Babybauchshooting"
+                    class="img-fluid"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 class="text-bold-small mb-2">Name</h3>
+                <p class="text-medium-small mb-0">Rückmeldung</p>
+              </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-            <div class="service-card">
-              <!-- ИЗОБРАЖЕНИЕ УСЛУГИ - изменить src="..." для замены -->
-              <div class="service-image mb-3">
-                <img
-                  src="assets/images/babybauch/foto11.jpg"
-                  alt="Babybauchshooting"
-                  class="img-fluid"
-                />
-              </div>
 
-              <!-- НАЗВАНИЕ УСЛУГИ -->
-              <h3 class="text-bold-small mb-3">Name</h3>
+          <!-- точки -->
+          <div class="swiper-pagination services-pagination"></div>
 
-              <!-- ОПИСАНИЕ УСЛУГИ -->
-              <p class="text-medium-small mb-0" style="max-width: 283px">
-                Rückmeldung
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-            <div class="service-card">
-              <!-- ИЗОБРАЖЕНИЕ УСЛУГИ - изменить src="..." для замены -->
-              <div class="service-image mb-3">
-                <img
-                  src="assets/images/babybauch/foto1.jpg"
-                  alt="Babybauchshooting"
-                  class="img-fluid"
-                />
-              </div>
-
-              <!-- НАЗВАНИЕ УСЛУГИ -->
-              <h3 class="text-bold-small mb-3">Name</h3>
-
-              <!-- ОПИСАНИЕ УСЛУГИ -->
-              <p class="text-medium-small mb-0" style="max-width: 283px">
-                Rückmeldung
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-            <div class="service-card">
-              <!-- ИЗОБРАЖЕНИЕ УСЛУГИ - изменить src="..." для замены -->
-              <div class="service-image mb-3">
-                <img
-                  src="assets/images/babybauch/foto7.jpeg"
-                  alt="Babybauchshooting"
-                  class="img-fluid"
-                />
-              </div>
-
-              <!-- НАЗВАНИЕ УСЛУГИ -->
-              <h3 class="text-bold-small mb-3">Name</h3>
-
-              <!-- ОПИСАНИЕ УСЛУГИ -->
-              <p class="text-medium-small mb-0" style="max-width: 283px">
-                Rückmeldung
-              </p>
-            </div>
-          </div>
+          <!-- стрелки -->
+          <div class="swiper-button-prev services-button-prev"></div>
+          <div class="swiper-button-next services-button-next"></div>
         </div>
 
-        <!-- КНОПКА CTA - призыв к действию -->
-        <!-- Изменить текст: между > и </a> -->
-        <!-- Изменить ссылку: href="..." -->
-        <!-- cta.isButton: true для золотой кнопки, иначе outline -->
-        <!-- <div class="row mt-5">
-          <div class="col-12">
-            <a href="quiz-1.html" class="btn btn-outline-custom">
-              Jetzt Kostenloses Fotoshooting sichern
-            </a>
-          </div>
-        </div> -->
-        <!-- КНОПКА CTA - bp ctrwbb 6 -->
+        <!-- CTA -->
         <div class="row mt-4">
           <div class="col-12 text-center">
-            <a href="quiz-1.html" class="btn btn-primary-custom">
-              Jetzt anmelden
-            </a>
+            <a href="quiz-1.html" class="btn btn-primary-custom"
+              >Jetzt anmelden</a
+            >
           </div>
         </div>
       </div>

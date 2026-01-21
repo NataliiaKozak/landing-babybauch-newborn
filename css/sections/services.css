@@ -1,79 +1,139 @@
-/* Services Section Specific Styles */
-
 .services {
   position: relative;
+  overflow: visible;
 }
 
+.services > .container {
+  position: static;
+}
+
+.services-title {
+  max-width: 883px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Swiper container */
+.services-swiper {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0 0 50px 0; /* только низ под точки */
+}
+
+/* Card */
 .service-card {
-  padding: 20px 10px;
+  padding: 10px;
+  text-align: center;
 }
 
-.services h2 {
-    margin-left: auto;    /* заголовок секции  */
-    margin-right: auto;    
-  }
-
-  
-.services-flat .service-image .img-placeholder {
+/* Image */
+.service-image {
+  width: 100%;
+  aspect-ratio: 4 / 5; /* портрет */
+  overflow: hidden;
   border-radius: 10px;
 }
 
-.service-image {
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  border-radius: 0; /* радиус уже на контейнере */
+}
+
+/* Pagination (dots) */
+.services-swiper .swiper-pagination {
+  bottom: 10px;
+}
+
+.services-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: var(--brand-text, #3d3d3d);
+  opacity: 0.3;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.services-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: var(--brand-gold, #e2c08d);
+  transform: scale(1.2);
+}
+
+/* Arrows */
+.services-swiper .services-button-prev,
+.services-swiper .services-button-next {
+  width: 30px !important;
+  height: 30px !important;
+
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  margin-top: 0 !important;
+
+  background: transparent !important;
+  color: #3d3d3d;
+  z-index: 10;
+
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
-.service-image img,
-.service-image .img-placeholder {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
+.services-swiper .services-button-prev {
+  left: 15px;
 }
 
-/* Responsive adjustments */
+.services-swiper .services-button-next {
+  right: 15px;
+}
+
+.services-swiper .services-button-prev:hover,
+.services-swiper .services-button-next:hover {
+  color: #e2c08d;
+}
+
+/* Override Swiper default arrow icons */
+.services-swiper .services-button-prev::after,
+.services-swiper .services-button-next::after {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.services-swiper .services-button-prev::after {
+  content: "←";
+}
+
+.services-swiper .services-button-next::after {
+  content: "→";
+}
+
+/* Responsive */
 @media (max-width: 991px) {
-  .services {
-    text-align: center;    /*  заголовок и текст карточек  */
+  .services-swiper {
+    padding: 0 0 50px 0;
   }
 
- 
-
-  .service-card {
-    /* margin-bottom: 30px; */
-    padding: 10px 10px;
+  .services-swiper .services-button-prev,
+  .services-swiper .services-button-next {
+    display: none;
   }
-
-  .service-card p {
-    margin-left: auto;    /* параграфы в карточках по центру, если есть max-width */
-    margin-right: auto;    /* параграфы в карточках по центру */
-  }
-
-  /* Reset cascade on tablet */
-  /* .services .row > div:nth-child(2) .service-card,
-  .services .row > div:nth-child(3) .service-card,
-  .services .row > div:nth-child(4) .service-card {
-    margin-top: 0;
-  } */
 }
 
 @media (max-width: 768px) {
-  .service-image .img-placeholder {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    aspect-ratio: 1 / 1;
-  }
-
-  .service-image img {
-    max-width: 250px;
+  .services-swiper {
+    padding: 0 0 40px 0;
   }
 }
 
 @media (max-width: 576px) {
-  .service-image .img-placeholder,
-  .service-image img {
-    max-width: 200px;
+  .services-swiper .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
   }
-
-  
 }

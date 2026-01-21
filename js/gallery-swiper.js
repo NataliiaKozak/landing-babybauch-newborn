@@ -38,3 +38,41 @@
     initGallerySwiper();
   }
 })();
+
+(function () {
+  function initServicesSwiper() {
+    var section = document.querySelector('.services');
+    if (!section) return;
+
+    var swiperEl = section.querySelector('.services-swiper');
+    if (!swiperEl) return;
+
+    if (typeof Swiper === 'undefined') return;
+
+    new Swiper(swiperEl, {
+      slidesPerView: 1,
+      spaceBetween: 15,
+      loop: true,
+      pagination: {
+        el: '.services-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.services-button-next',
+        prevEl: '.services-button-prev',
+      },
+      grabCursor: true,
+      breakpoints: {
+        576: { slidesPerView: 2, spaceBetween: 15 },
+        768: { slidesPerView: 2, spaceBetween: 20 },
+        992: { slidesPerView: 3, spaceBetween: 20 },
+      },
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initServicesSwiper);
+  } else {
+    initServicesSwiper();
+  }
+})();
