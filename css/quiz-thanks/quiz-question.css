@@ -3,14 +3,14 @@
    ============================================================================ */
 
 .quiz-question {
-  padding: 20px 0 100px 0;
+  padding: 0 0 100px 0; /* убрали верхний отступ */
   min-height: calc(100vh - 250px);
 }
 
-/* Title добавлено margin-top: 20px; изменено margin-bottom*/
+/* Title */
 .quiz-question__title {
-  margin-top: 20px;
-  margin-bottom: 50px;
+  margin-top: 0; /* было 20px */
+  margin-bottom: 24px; /* было 50px */
   padding: 0 2px;
 }
 
@@ -21,7 +21,7 @@
   margin: 0;
 }
 
-/* Cards grid (картинка + кнопка вместе) */
+/* Cards grid */
 .quiz-question__cards {
   display: flex;
   gap: 14px;
@@ -37,12 +37,12 @@
   justify-content: space-between;
 }
 
-/* Карточка (картинка + кнопка) - без gap, кнопка прилегает к картинке */
+/* Card */
 .quiz-question__card {
   display: flex;
   flex-direction: column;
   gap: 0;
-  flex: 0 0 calc((100% - 42px) / 4); /* 4 items, 3 gaps of 14px */
+  flex: 0 0 calc((100% - 42px) / 4);
   max-width: 300px;
 }
 
@@ -72,7 +72,7 @@
   border-radius: 10px 10px 0 0;
 }
 
-/* Option button - only bottom corners rounded (Figma: rounded-bl-[30px] rounded-br-[30px]) */
+/* Option button */
 .quiz-question__option {
   display: flex;
   align-items: center;
@@ -84,14 +84,12 @@
   border: none;
   border-radius: 0 0 10px 10px;
   text-decoration: none;
-  /* color: #000000;
-  font-size: 22px;
-  font-weight: 500;
-  font-family: 'Inter', sans-serif; */
+
   font-size: var(--font-body);
   font-weight: var(--font-weight-medium);
   font-family: var(--font-family);
   color: var(--color-black);
+
   transition: all 0.3s ease;
   cursor: pointer;
   box-sizing: border-box;
@@ -110,12 +108,6 @@
   color: #ffffff;
 }
 
-/* .quiz-question__option-text {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-} */
-
 .quiz-question__option-text {
   flex: 1;
   min-width: 0;
@@ -124,9 +116,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* Multiline option (for longer text) */
-/* quiz-question__option--multiline - для многострочного текста в кнопке 
-- в связи изменением  --font-body: 16px;надо было удалить в некоторых квизах: 2, 3, 4, 8, 9, 10 */
+
+/* Multiline option */
 .quiz-question__option--multiline {
   height: 92px;
   white-space: normal;
@@ -156,6 +147,11 @@
     flex: 0 0 calc(50% - 7px);
     width: calc(50% - 7px);
     max-width: 300px;
+  }
+}
+@media (max-width: 991px) {
+  .quiz-question {
+    min-height: auto;
   }
 }
 
@@ -193,15 +189,9 @@
   .quiz-question__cards--2 .quiz-question__card,
   .quiz-question__cards--3 .quiz-question__card {
     flex: 0 0 100%;
-    /* width: 100%;
-        max-width: 100%; */
     width: 240px;
-    max-width: 240px;  /* для уменьшения размера */
-    gap: 10px;
-  }
-
-  .quiz-question__card {
-    gap: 0;  /* для уменьшения размера */
+    max-width: 240px;
+    gap: 0;
   }
 }
 
@@ -212,7 +202,7 @@
   }
 
   .quiz-question__title {
-    margin-bottom: 20px;
+    margin-bottom: 12px; /* было 20px */
   }
 
   .quiz-question__title h1 {
@@ -224,7 +214,7 @@
   }
 
   .quiz-question__card {
-    gap: 8px;
+    gap: 0; /* фото и ответ без промежутка */
   }
 
   .quiz-question__option {
@@ -238,7 +228,6 @@
     min-height: 70px;
   }
 
-  /* для уменьшения размера */
   .quiz-question__card,
   .quiz-question__cards--2 .quiz-question__card,
   .quiz-question__cards--3 .quiz-question__card {
