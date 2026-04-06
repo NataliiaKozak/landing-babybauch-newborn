@@ -1,6 +1,6 @@
-# Лендинг "Фотосессии новорождённых"
+# Landing Page — Newborn Photography
 
-## Структура
+## Project Structure
 
 - assets/
   - icons/ # SVG/PNG icons (social, UI)
@@ -55,17 +55,19 @@
 - README.md
 - .gitignore
 
+---
+
 ## CSS
 
-CSS переменные (Design Tokens):
+### Design Tokens (CSS Variables)
 
 ```css
 :root {
   /* Colors */
-  --brand-primary: #f5ede0; /* Основной фон */
-  --brand-secondary: #eee3d0; /* Вторичный фон */
-  --brand-accent: #e2c08d; /* Акцент (кнопки) */
-  --brand-text: #3d3d3d; /* Текст */
+  --brand-primary: #f5ede0; /* Main background */
+  --brand-secondary: #eee3d0; /* Secondary background */
+  --brand-accent: #e2c08d; /* Accent (buttons) */
+  --brand-text: #3d3d3d; /* Text color */
 
   /* Typography */
   --font-h1: 55px;
@@ -80,68 +82,52 @@ CSS переменные (Design Tokens):
 }
 ```
 
-### Фоновые классы (для секций)
+### Background Classes
 
-Секции используют CSS классы:
+| Class                 | CSS Variable             | Default Color |
+| --------------------- | ------------------------ | ------------- |
+| `.bg-brand-primary`   | `var(--brand-primary)`   | #F5EDE0       |
+| `.bg-brand-secondary` | `var(--brand-secondary)` | #EEE3D0       |
+| `.bg-brand-accent`    | `var(--brand-accent)`    | #E2C08D       |
+| `.bg-brand-white`     | `var(--color-white)`     | #FFFFFF       |
+| `.bg-brand-dark`      | `var(--brand-dark)`      | #171717       |
 
-| Класс                 | CSS переменная           | Цвет по умолчанию |
-| --------------------- | ------------------------ | ----------------- |
-| `.bg-brand-primary`   | `var(--brand-primary)`   | #F5EDE0           |
-| `.bg-brand-secondary` | `var(--brand-secondary)` | #EEE3D0           |
-| `.bg-brand-accent`    | `var(--brand-accent)`    | #E2C08D           |
-| `.bg-brand-white`     | `var(--color-white)`     | #FFFFFF           |
-| `.bg-brand-dark`      | `var(--brand-dark)`      | #171717           |
+To change colors — edit `:root` in `css/base-styles.css`.
 
-**Для изменения цветов** — редактируйте `:root` в `base-styles.css`.
+### Reusable Classes (common.css)
 
-### common.css
+| Class                                    | Description             |
+| ---------------------------------------- | ----------------------- |
+| `.text-h1`, `.text-h2`, `.text-h3`       | Headings                |
+| `.text-bold-big`, `.text-medium-big`     | 28px text               |
+| `.text-bold-small`, `.text-medium-small` | 22px text               |
+| `.btn-primary-custom`                    | Accent button (#E2C08D) |
+| `.btn-outline-custom`                    | Outline button          |
+| `.img-placeholder`                       | Image placeholder       |
 
-Переиспользуемые классы:
-
-| Класс                                    | Описание                    |
-| ---------------------------------------- | --------------------------- |
-| `.text-h1`, `.text-h2`, `.text-h3`       | Заголовки                   |
-| `.text-bold-big`, `.text-medium-big`     | 28px текст                  |
-| `.text-bold-small`, `.text-medium-small` | 22px текст                  |
-| `.btn-primary-custom`                    | Кнопка с акцентом (#E2C08D) |
-| `.btn-outline-custom`                    | Контурная кнопка            |
-| `.img-placeholder`                       | Плейсхолдер изображения     |
+---
 
 ## JavaScript
 
 ### common.js
 
-### quiz.js
+### quiz.js — Quiz Flow Logic
 
-Логика quiz-воронки:
+- Saves answers to `localStorage`
+- Form validation
+- Submits data to Google Sheets
 
-- Сохранение ответов в localStorage
-- Валидация формы
-- Отправка на Google Sheets
+### Quiz Flow
 
-В этом лендинге два направления: "Фотосессии беременных" и "Фотосессии новорождённых". Если выбрать "Фотосессии новорождённых", то попадаeм на квизы для новорождённых, а именно:
+The landing covers two directions: **Babybauch** (pregnancy) and **Newborn** photography.
 
-• quiz-1.html → ветка:
-o Babybauch → quiz-2.html
-o Newborn → quiz-6.html
+quiz-1.html
+├── Babybauch → quiz-2.html → quiz-3.html → quiz-4.html → quiz-5.html → quiz-form.html
+└── Newborn → quiz-6.html
+├── Bereits Elternteil → quiz-7.html → quiz-8.html → quiz-9.html → quiz-5.html → quiz-form.html
+└── Noch schwanger → quiz-10.html → quiz-8.html → quiz-9.html → quiz-5.html → quiz-form.html
 
-Babybauch:
-• quiz-2.html → quiz-3.html
-• quiz-3.html → quiz-4.html
-• quiz-4.html → quiz-5.html
-• quiz-5.html → quiz-form.html
-
-Newborn:
-• quiz-6.html:
-o Bereits Elternteil → quiz-7.html
-o Noch schwanger → quiz-10.html
-• quiz-7.html → quiz-8.html
-• quiz-10.html → quiz-8.html
-• quiz-8.html → quiz-9.html
-• quiz-9.html → quiz-5.html
-• quiz-5.html → quiz-form.html
-
-Конфигурация через data-атрибуты:
+### Configuration via Data Attributes
 
 ```html
 <body
@@ -151,63 +137,61 @@ o Noch schwanger → quiz-10.html
 ></body>
 ```
 
-## Как изменить цвета (для клиента)
+---
 
-Откройте файл `css/base-styles.css` и измените значения в `:root`:
+## Customization
+
+### How to Change Colors
+
+Open `css/base-styles.css` and edit the values in `:root`:
 
 ```css
 :root {
-  /* ====== ЦВЕТА - РЕДАКТИРУЙТЕ ЗДЕСЬ ====== */
-  --brand-primary: #f5ede0; /* Основной фон секций */
-  --brand-secondary: #eee3d0; /* Вторичный фон секций */
-  --brand-accent: #e2c08d; /* Кнопки, акценты */
-  --brand-text: #3d3d3d; /* Цвет текста */
+  /* ====== COLORS — EDIT HERE ====== */
+  --brand-primary: #f5ede0; /* Main section background */
+  --brand-secondary: #eee3d0; /* Secondary section background */
+  --brand-accent: #e2c08d; /* Buttons, accents */
+  --brand-text: #3d3d3d; /* Text color */
 }
 ```
 
-### Пример: Изменить на розовую тему
+**Example: Switch to a pink theme**
 
 ```css
 :root {
-  --brand-primary: #fff0f5; /* Светло-розовый */
-  --brand-secondary: #ffe4e9; /* Розовый */
-  --brand-accent: #ff69b4; /* Ярко-розовый */
-  --brand-text: #333333; /* Темный текст */
+  --brand-primary: #fff0f5; /* Light pink */
+  --brand-secondary: #ffe4e9; /* Pink */
+  --brand-accent: #ff69b4; /* Hot pink */
+  --brand-text: #333333; /* Dark text */
 }
 ```
 
-Сохраните файл — все страницы лендинга обновятся
+Save the file — all pages will update automatically.
+
+### What You Can Change
+
+| Element             | How                                         | File                  |
+| ------------------- | ------------------------------------------- | --------------------- |
+| Section backgrounds | Edit `--brand-primary`, `--brand-secondary` | `css/base-styles.css` |
+| Button color        | Edit `--brand-accent`                       | `css/base-styles.css` |
+| Text color          | Edit `--brand-text`                         | `css/base-styles.css` |
+| Font family         | Edit `--font-family`                        | `css/base-styles.css` |
+| Heading sizes       | Edit `--font-h1`, `--font-h2`               | `css/base-styles.css` |
+| Text content        | Find and replace in HTML                    | `*.html`              |
+| Images              | Replace URL in `src="..."`                  | `*.html`              |
+
+### What You Should Not Change
+
+- HTML tag structure
+- CSS class names
+- JavaScript files
+- Bootstrap files
 
 ---
 
-## Что можно изменять
+## Common Edits
 
-| Элемент               | Как изменить                                    | Файл                  |
-| --------------------- | ----------------------------------------------- | --------------------- |
-| **Цвета фонов**       | Изменить `--brand-primary`, `--brand-secondary` | `css/base-styles.css` |
-| **Цвет кнопок**       | Изменить `--brand-accent`                       | `css/base-styles.css` |
-| **Цвет текста**       | Изменить `--brand-text`                         | `css/base-styles.css` |
-| **Шрифт**             | Изменить `--font-family`                        | `css/base-styles.css` |
-| **Размер заголовков** | Изменить `--font-h1`, `--font-h2`               | `css/base-styles.css` |
-| **Тексты**            | Найти и заменить в HTML                         | `*.html`              |
-| **Изображения**       | Заменить URL в `src="..."`                      | `*.html`              |
-
----
-
-## Что нельзя изменять
-
-- Структуру HTML тегов
-- Названия CSS классов
-- JavaScript файлы
-- Bootstrap файлы
-
----
-
-## Типичные изменения
-
-### Изменить текст кнопки
-
-Найти в HTML:
+### Change button text
 
 ```html
 <a href="quiz-1.html" class="btn btn-primary-custom">
@@ -215,18 +199,16 @@ o Noch schwanger → quiz-10.html
 </a>
 ```
 
-Заменить текст между `>` и `</a>`.
+Replace the text between `>` and `</a>`.
 
-### Изменить изображение
-
-Найти в HTML:
+### Change an image
 
 ```html
-<img src="https://example.com/photo.jpg" alt="Описание" />
+<img src="https://example.com/photo.jpg" alt="Description" />
 ```
 
-Заменить URL в `src="..."`.
+Replace the URL in `src="..."`.
 
-### Изменить ссылку
+### Change a link
 
-Найти `href="..."` и заменить URL.
+Find `href="..."` and replace the URL.
